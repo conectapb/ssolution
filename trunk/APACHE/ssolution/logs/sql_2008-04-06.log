@@ -1,0 +1,15 @@
+1207504682	UPDATE admins SET ultacesso_ip='10.12.7.3',ultacesso=NOW() WHERE id=2
+1207504682	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1207505619	UPDATE admins SET ultacesso_ip='10.12.7.9',ultacesso=NOW() WHERE id=3
+1207505619	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1207506090	INSERT INTO planos(codigo,nome,descricao,vel_download,vel_upload,valor_base,valor_pontoadicional,fidelidade,observacoes) VALUES('sc300-BItibere','SmartConnect300 - EdBItibere','Plano de 300x150 para o EdBItibere','300','150','47.50','10.00','','')
+1207506235	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','Serviço de Comunicação e Multimídia - Internet','5','10','33','6','2008-04-06','2009-04-06','7','10','1','')
+1207507062	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','35','6','2008-04-06','2009-04-06','7','10','1','')
+1207507118	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','36','6','2008-04-06','2009-04-06','7','10','1','')
+1207507167	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','37','6','2008-04-06','2009-04-06','7','10','1','')
+1207507202	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','38','6','2008-04-06','2009-04-06','7','10','1','')
+1207507253	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','39','6','2008-04-06','2009-04-06','7','10','1','')
+1207507291	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','40','6','2008-04-06','2009-04-06','7','10','1','')
+1207507354	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,ativo,observacoes) VALUES('','','5','10','31','6','2007-04-06','2008-01-23','7','10','1','')
+1207508279	UPDATE admins SET ultacesso_ip='10.12.7.3',ultacesso=NOW() WHERE id=2
+1207508279	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')

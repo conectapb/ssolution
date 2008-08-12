@@ -1,0 +1,382 @@
+080728  9:49:53 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080729  1:10:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080729  1:10:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080729  8:24:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080729  9:47:50 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080729  9:47:51 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080729  9:52:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080729 23:46:52 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080729 23:46:52 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080730  8:18:15 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080730 12:06:15 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080730 12:06:16 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080730 12:08:12 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731  4:24:14 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731  4:24:14 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080731  8:18:12 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\admins.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:20 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_status.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\chamados_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\clientes_bkp.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contatos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\contratos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\estacoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\funcoes.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\grupos_tipos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\logs_admin.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\periodos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\planos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\provedores.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:51:21 [ERROR] C:\xampp\mysql\bin\mysqld-nt.exe: Incorrect information in file: '.\ssolution2\titulos.frm'
+080731  8:52:09 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731  8:52:09 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080731 10:07:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731 10:16:01 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731 10:16:01 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080731 21:50:23 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731 21:51:37 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731 21:51:37 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080731 21:53:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731 22:14:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731 22:14:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080731 22:15:41 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080731 23:50:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080731 23:50:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080801  8:22:03 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080801  8:42:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080801  8:42:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080801  9:19:19 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080801 12:13:25 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080801 12:13:25 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080801 14:47:22 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080801 20:48:28 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080801 20:48:29 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080801 20:51:37 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080801 21:10:48 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080801 21:10:48 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080801 21:14:05 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080802  1:10:48 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080802  1:10:49 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080802  1:12:34 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080802  2:01:38 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080802  2:01:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080802  9:49:01 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080802 15:23:38 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080802 15:24:18 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080802 16:16:37 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080802 19:14:10 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080802 19:14:11 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080802 19:18:25 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080803  7:41:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080803  7:41:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080803 14:26:14 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080804  2:48:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080804  2:48:12 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080804  8:21:22 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080804 21:31:13 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080804 21:31:13 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080805  8:17:56 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080805 11:07:38 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080805 11:07:38 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080805 11:07:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080805 11:50:47 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080805 11:50:47 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080805 11:52:59 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080805 13:35:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080805 13:35:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080806  8:26:24 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080806  8:35:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080806  8:35:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080806  8:46:30 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080806  8:55:06 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080806  8:55:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080806  8:57:57 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080806  9:04:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080806  9:04:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080806  9:15:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080807  2:21:06 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080807  2:21:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080807  8:20:33 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080808  0:59:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080808  0:59:41 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080808  8:42:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080809  1:26:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080809  1:26:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080809  9:28:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080809 11:21:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080809 11:21:03 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080809 13:03:58 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080809 13:24:33 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080809 13:24:33 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080810  9:14:25 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080811  1:07:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080811  1:07:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080811  8:16:55 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080811 10:51:06 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080811 10:51:07 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080811 10:53:14 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080812  0:05:38 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080812  0:05:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080812  8:12:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)

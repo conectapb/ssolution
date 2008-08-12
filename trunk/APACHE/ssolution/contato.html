@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>:: SmartSolution - Wireless Internet Services ::</title>
+<meta name="keywords" content="Contato", "Smart Solution", "Internet" />
+<meta name="description" content="Solicite informações sobre Smart Solution e seus serviços." />
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 1.2em;
+	color: #333333;
+}
+.style3 {color: #333333; }
+-->
+</style>
+</head>
+<body>
+<div id="topo">
+
+
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="index.html" accesskey="1" title="">Home</a></li>
+	  <li><a href="servicos.html" accesskey="2" title="">Serviços</a></li>
+	  <li><a href="precos.html" accesskey="4" title="">Planos</a></li>
+	  <li class="active"><a href="#" accesskey="5" title="">Contato</a></li>
+  </ul>
+</div>
+<div id="content" style="background: url(images/img5.gif);">
+	<div class="style3" id="colOne">
+		<h2 class="style1"><img src="images/foto_contato.jpg" alt="" width="160" height="180" /></h2>
+		<h3 class="style3">Para mais informações:</h3>
+		<p><strong>  <br />
+	    Tel:</strong> 41 3234 2443 <br/>
+        <strong>Cel:</strong> 41 8416 0817<br />
+		<strong><br />
+		E-mail:</strong><br />
+		<a href="mailto:smart@smartsolution.com.br">smart@smartsolution.com.br</a><br />
+        </strong></p>
+  </div>
+	<div class="style3" id="colTwo">
+		<h2>Contato</h2>
+		<p>Solicite as informações que você necessita sobre os nossos produtos e serviços, nossa organização ou sobre quaisquer dúvidas que possa ter.</p>
+
+<p><font color="#0099CC"><strong>Seus comentários e sugestões também são bem-vindos.</strong></font></p>
+<form action="envia_email.php" method="post">
+<table border="0" cellpadding="3" cellspacing="1">
+  <!--<tr>
+    <td bgcolor="#CCCCCC"><div align="right"><strong>Forma de Contato:</strong> </div></td>
+    <td bgcolor="#CCCCCC"><select name="select" class="input">
+      <option>selecione uma opção</option>
+      <option>Contate-nos para maiores informações</option>
+      <option>Solicite verificação de disponibilidade p/ serviço</option>
+    </select>    </td>
+  </tr>-->
+  <tr>
+    <td width="29%" bgcolor="#FFFFFF"><div align="right"><strong>Nome:</strong></div></td>
+    <td width="71%" bgcolor="#FFFFFF"><input name="nome" type="text" size="50" class="input" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>E-mail:</strong></div></td>
+    <td bgcolor="#FFFFFF"><input name="email" type="text" size="50" class="input" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Fone residencial:</strong></div></td>
+    <td bgcolor="#FFFFFF">DDD
+      <input name="fone_residencial_ddd" type="text" size="2" class="input" />
+       <input name="fone_residencial" type="text" size="15" class="input" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Fone comercial:</strong></div></td>
+    <td bgcolor="#FFFFFF">DDD
+      <input name="fone_comercial_ddd" type="text" size="2" class="input" />
+      <input name="fone_comercial" type="text" size="15" class="input" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Fone Celular:</strong></div></td>
+    <td bgcolor="#FFFFFF">DDD
+      <input name="fone_celular_ddd" type="text" size="2" class="input" />
+      <input name="fone_celular" type="text" size="15" class="input" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" bgcolor="#FFFFFF"><div align="right"><strong>Endereço:</strong></div></td>
+    <td bgcolor="#FFFFFF"><font size="1">Rua, Avenida, Travessa, etc... </font><br />
+      <input name="logradouro" type="text" size="35" class="input" /> 
+        <strong>N°:</strong> 
+        <input name="logradouro_numero" type="text" size="5" class="input" /></td>
+  </tr>
+  <tr>
+    <td valign="middle" bgcolor="#FFFFFF"><div align="right"><strong>Complemento:</strong></div></td>
+    <td bgcolor="#FFFFFF"><input name="complemento" type="text" size="30" class="input" />
+      <strong>CEP:
+      <input name="cep" type="text" size="8" class="input" />
+      </strong></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="middle"><hr noshade="noshade" /></td>
+    </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Tipo de imóvel: </strong></div></td>
+    <td bgcolor="#FFFFFF"><font size="1">Residência, Apartamento, prédio, etc... </font><br />
+        <input name="tipo_imovel" type="text" size="50" class="input" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Se &quot;apto&quot; informe:</strong></div></td>
+    <td bgcolor="#FFFFFF"><table border="0" cellspacing="2" cellpadding="0">
+      <tr>
+        <td width="235" height="40">Nome do condomínio<br />
+          <input name="nome_condominio" type="text" class="input" size="40" /></td>
+      </tr>
+      <tr>
+        <td height="40">Digite o Nome do síndico<br />
+          <input name="nome_sindico" type="text" class="input" size="40" /></td>
+      </tr>
+      <tr>
+        <td bgcolor="f8f8f8">Seu Bloco:
+          <input name="seu_bloco" type="text" size="6" class="input" /> 
+          &nbsp;&nbsp;&nbsp; Seu Apto: 
+          <input name="seu_apto" type="text" size="6" class="input" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="middle"><hr noshade="noshade" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><div align="right"><strong>Assunto:</strong></div></td>
+    <td bgcolor="#FFFFFF"><input name="assunto" type="text" size="50" class="input" /></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><div align="right"><strong>Mensagem:</strong></div></td>
+    <td bgcolor="#FFFFFF"><textarea name="mensagem" cols="47" rows="5" class="input"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFFFFF"><label>
+      <input type="submit" name="enviar" class="input" value="Enviar" />
+    </label></td>
+  </tr>
+</table>
+
+
+
+
+</form>
+		<p>&nbsp;</p>
+  </div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+	<p>Desenvolvido por: <a href="http://www.flickr.com/photos/jeffolinger" target="_blank">JOS Design</a></a></p>
+</div>
+</body>
+</html>

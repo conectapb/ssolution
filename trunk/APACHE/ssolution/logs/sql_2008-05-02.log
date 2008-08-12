@@ -1,0 +1,32 @@
+1209730790	UPDATE admins SET ultacesso_ip='10.12.7.13',ultacesso=NOW() WHERE id=3
+1209730790	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1209733568	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='10',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=8
+1209733588	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='12',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=10
+1209733608	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='16',grupo_id='3',data_inicio='2008-02-20',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=11
+1209733624	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='7',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=5
+1209733650	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='14',grupo_id='3',data_inicio='2008-02-20',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=12
+1209733665	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='9',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=7
+1209733681	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='17',grupo_id='3',data_inicio='2008-02-01',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=13
+1209733696	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='15',grupo_id='3',data_inicio='2008-02-01',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=15
+1209733716	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='11',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=9
+1209733736	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='13',grupo_id='3',data_inicio='2008-02-01',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=14
+1209733874	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='8',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',periodo_id='6',vencimento_padrao='10',valor_padrao='45.00',ativo='1',observacoes='' WHERE id=6
+1209739653	UPDATE grupos SET nome_padrao='EdRoma',codigo='06',tipo='1',nome='Edif�cio Roma',endereco='Av. Sete de Setembro',numero='3293',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',observacoes='' WHERE id=4
+1209744145	INSERT INTO grupos(nome_padrao,codigo,tipo,nome,endereco,numero,bairro,cep,cidade,uf,observacoes) VALUES('lá','lá','1','lá','lá','lá','lá','lá','lá','PR','lá')
+1209751460	UPDATE admins SET ultacesso_ip='10.12.7.13',ultacesso=NOW() WHERE id=3
+1209751460	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1209751489	UPDATE grupos SET nome_padrao='EdBCapanema',codigo='51',tipo='1',nome='Condominio Residencial Barão de Capanema',endereco='',numero='',bairro='Jardim Bot�nico',cep='',cidade='Curitiba',uf='PR',observacoes='' WHERE id=11
+1209751504	UPDATE grupos SET nome_padrao='EdOrionis',codigo='101',tipo='1',nome='Edifício Residencial Orionis',endereco='R Marechal Ot�vio Saldanha Mazza',numero='7777',bairro='Pinheirinho',cep='81150060',cidade='Curitiba',uf='PR',observacoes='Tel portaria 3247-0879
+
+Sindica Alexandra _tel esposo _ 9187 9082_' WHERE id=12
+1209752445	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1209752445	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1209758050	UPDATE clientes SET codigo='05002',tipo='0',nome='Maris�ngela Pacheco Brittes',nascimento='2008-05-02',rg='1111111111',cpf='906.561.219-04',sexo='F',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='1',endereco='Av. Sete de Setembro',numero='3272',complemento_tipo='Ap.',bloco='',complemento='03',bairro='Centro',cep='80230-010',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='',tel_celular2='',site='',email1='',email2='',email3='',observacoes='02/05/08=Alterou config individual para Router wireless
+Dlink WBR1310 = 00:1C:F0:FE:B9:7D' WHERE id=54
+1209758050	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Alterado Cliente ID=54 Nome=Maris�ngela Pacheco Brittes','')
+1209758483	UPDATE grupos SET nome_padrao='EdMarajo',codigo='08',tipo='1',nome='Edifício Residencial Marajó',endereco='Rua Alferes Poli',numero='294',bairro='Centro',cep='80.230-090',cidade='Curitiba',uf='PR',observacoes='' WHERE id=3
+1209758494	UPDATE grupos SET nome_padrao='EdRoma',codigo='06',tipo='1',nome='Edifício Roma',endereco='Av. Sete de Setembro',numero='3293',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',observacoes='' WHERE id=4
+1209758508	UPDATE grupos SET nome_padrao='EdOdoni',codigo='05',tipo='1',nome='Edifício Odoni',endereco='Av. Sete de Setembro',numero='3272',bairro='Centro',cep='80230-010',cidade='Curitiba',uf='PR',observacoes='' WHERE id=1
+1209758521	UPDATE grupos SET nome_padrao='EdWashington',codigo='04',tipo='1',nome='Edifício Comercial Washington',endereco='R. 24 de Maio',numero='262',bairro='Centro',cep='80230-080',cidade='Curitiba',uf='PR',observacoes='' WHERE id=5
+1209758547	UPDATE grupos SET nome_padrao='EdBItibere',codigo='03',tipo='1',nome='Condominio Residencial Brasilio Itiberê',endereco='Rua Brasílio Itiberê',numero='2455',bairro='Rebou�as',cep='80230-050',cidade='Curitiba',uf='PR',observacoes='' WHERE id=6
+1209758561	UPDATE grupos SET nome_padrao='EdLPinto',codigo='02',tipo='1',nome='Edificio Residencial Lourenço Pinto',endereco='Rua Lourenço Pinto',numero='260',bairro='Centro',cep='80010160',cidade='Curitiba',uf='PR',observacoes='' WHERE id=7
