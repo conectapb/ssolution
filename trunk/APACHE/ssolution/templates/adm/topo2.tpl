@@ -13,12 +13,13 @@
 
 <head>
 	<link href="{$tpl_adm_style}" rel="stylesheet" type="text/css" />
+    <link href="{$tpl_dir_adm}tablesorter.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="{$tpl_dir_adm}drop_down.js"></script>
 </head>
 
 <body>
 
-<div id="template_sel" style="position:absolute; right:15px; top:15px;">
+<div id="template_sel" style="position:absolute; right:10px; top:10px;">
 <form name="tpl" action="{$SCRIPT_NAME}?{$querystring}" id="tpl" method="post">
 <input type="hidden" name="tpl_adm" />
 <select name="tpl_sel" onchange="document.tpl.tpl_adm.value=this.value; document.tpl.submit();">

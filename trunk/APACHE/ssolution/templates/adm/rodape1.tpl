@@ -1,7 +1,7 @@
+<!--
+<br />
 	
-	</div>
-	<div id="rodape">Smart Solution Tecnologia da Informação</div>
-</div>
+<div>Smart Solution Tecnologia da Informação</div>-->
 
 </body>
 </html>

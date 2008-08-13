@@ -118,12 +118,15 @@ function chgVal($id,$op)
 <tbody>
 {section name=i loop=$dados}
 {assign var="grupo_atual" value=$dados[i].grupo}
+{if $dados[i].status_id == 1}{assign var="cor_status" value="#009966"}{/if}
+{if $dados[i].status_id == 2}{assign var="cor_status" value="#FF0000"}{/if}
+{if $dados[i].status_id == 2}{assign var="cor_status" value="#FF9900"}{/if}
 {if $grupo_atual != $grupo_anterior && false}
 	<tr>
 		<td class="td_agrupador" colspan="10">{$dados[i].grupo}</td>
 	</tr>
 {/if}
-	<tr class="doStrip">
+	<tr class="doStrip" style="color:{$cor_status};">
 		<td class="td_content">{if $dados[i].codigo != ""}{$dados[i].codigo}{else}-{/if}</td>
 		<td class="td_content">{$dados[i].grupo}</td>
 		<td class="td_content">{$dados[i].bloco}</td>

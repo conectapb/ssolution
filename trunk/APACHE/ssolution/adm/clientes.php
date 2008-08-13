@@ -286,6 +286,7 @@ else if($modo=="lst")
 		SELECT CLI.*,(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS nome,GRU.nome_padrao AS grupo
 		FROM clientes CLI
 		INNER JOIN grupos GRU ON CLI.grupo_id = GRU.id
+		INNER JOIN clientes_status STA ON CLI.status_id = STA.id
 		" . $whr . "
 		ORDER BY GRU.codigo,grupo,CLI.nome
 		",
