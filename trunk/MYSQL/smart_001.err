@@ -404,3 +404,5 @@ Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition
 
 080815  8:13:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
 Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080815 10:43:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
