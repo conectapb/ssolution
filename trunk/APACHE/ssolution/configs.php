@@ -18,6 +18,7 @@ if ($_SERVER['HTTP_HOST']=="localhost" || $rede_smart[1] = 12 ){
 	$pass = "";
 	$uppdir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . "/uploads/";
 	$smartydir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . '/libs/smarty/libs/';
+	$phpgacldir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . '/libs/phpgacl/';
 	$logdir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . '/logs/';
 	$sqllogfile = $logdir . "sql_%date%.log";
 }
@@ -85,6 +86,13 @@ $visual->assign('tpl_adm_rodape',$visual->template_dir."/adm/rodape" . $_SESSION
 $visual->assign('tpl_adm_style',$visual->template_dir."/adm/style" . $_SESSION['tpl_adm'] . ".css");
 
 $visual->assign('querystring',$querystring);
+
+// INICIALIZACAO DO phpGACL
+require_once($phpgacldir . 'gacl.class.php');
+require_once($phpgacldir . 'gacl_api.class.php');
+require_once($phpgacldir . 'admin/gacl_admin.inc.php');
+
+$gacl = new gacl($gacl_options);
 
 /* #################################
    ### FUNCOES DE BANCO DE DADOS ###

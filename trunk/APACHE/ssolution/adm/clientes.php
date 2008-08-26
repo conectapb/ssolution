@@ -21,6 +21,19 @@ function pegaUltimoCodigo($conn){
 $modo = $_REQUEST['modo'];
 if($modo=="") $modo="lst";
 
+$axo_section_value = 'sistema';
+$axo_value = 'clientes';
+$aco_section_value = 'system';
+$aco_value = $modo;
+$aro_section_value = 'users';
+$aro_value = $_SESSION['admin_login'];
+
+if ( $gacl->acl_check($aco_section_value,$aco_value,$aro_section_value,$aro_value,$axo_section_value,$axo_value )  ) {
+	echo "$aro_value has been granted access!<br>\n";	
+} else {
+	echo "$aro_value has been denied access!<br>\n";	
+}
+
 $processa = $_REQUEST['processa'];
 
 $id	= $_REQUEST['id'];
