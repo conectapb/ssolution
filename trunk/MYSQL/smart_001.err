@@ -900,3 +900,79 @@ Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition
 
 080921 14:00:47 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
 Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080921 15:29:29 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080921 15:29:31 [Warning] C:\xampp\mysql\bin\mysqld-nt.exe: Forcing close of thread 8  user: 'root'
+
+080921 15:29:31 [Warning] C:\xampp\mysql\bin\mysqld-nt.exe: Forcing close of thread 4  user: 'root'
+
+080921 15:29:31 [Warning] C:\xampp\mysql\bin\mysqld-nt.exe: Forcing close of thread 2  user: 'root'
+
+080921 15:29:31 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080922  8:17:14 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080922  8:37:24 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080922 11:27:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080922 11:27:42 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080922 12:35:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080922 16:26:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080922 16:26:02 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080922 18:21:00 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080922 18:27:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080922 18:27:39 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080922 20:16:00 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080923  2:54:32 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080923  2:54:32 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080923  8:19:57 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080923 12:22:52 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080923 12:22:52 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080923 12:24:56 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080923 16:45:40 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080923 16:45:41 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080923 18:30:41 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080923 18:39:58 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080923 18:39:58 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080923 19:47:55 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080923 21:26:03 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080923 21:26:04 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080924  0:05:48 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080924  0:13:11 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080924  0:13:12 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080924  0:28:49 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080924  2:38:20 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+080924  2:38:21 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+080924  8:15:16 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+080924  9:44:29 [Note] C:\xampp\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.0.51b-community-nt'  socket: ''  port: 3306  MySQL Community Edition (GPL)
