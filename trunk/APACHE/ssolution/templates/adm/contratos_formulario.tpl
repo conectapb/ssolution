@@ -97,7 +97,7 @@
 	</tr>
 	
 	<tr>
-		<td class="rotulo"><label class="rotulos" for="periodo_id">Período Padrão :</label></td>
+		<td class="rotulos"><label class="rotulos" for="periodo_id">Período Padrão :</label></td>
 		<td>
 			<select name="periodo_id" style="width:454px;">
 				<option value=""></option>

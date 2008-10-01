@@ -134,7 +134,7 @@ if ($modo=="cad")
 	$visual->assign('modo',$modo);
 	$visual->display('adm/contratos_formulario.tpl');
 }
-else if ($modo=="alt" || $modo=="vis")
+else if ($modo=="alt")
 {
 	$visual->assign('clientes',pegaListaClientes($conexao));
 	$visual->assign('planos',table2array("planos",$conexao));
@@ -177,11 +177,52 @@ else if ($modo=="alt" || $modo=="vis")
 		"observacoes" =>		array("observacoes","Observações","varchar","não-requerido",$valores['observacoes'])
 	);
 	$visual->assign('campos',$campos);
+	$visual->display('adm/contratos_formulario.tpl');
+}
+else if($modo=="vis")
+{
+	$visual->assign('clientes',pegaListaClientes($conexao));
+	$visual->assign('planos',table2array("planos",$conexao));
+	$visual->assign('provedores',table2array("provedores",$conexao));
+	$visual->assign('periodos',table2array("periodos",$conexao));
+
+	if (!is_numeric($id))
+		die("ID faltando para visualização");
 	
-	if($modo=="alt")
-		$visual->display('adm/contratos_formulario.tpl');
-	else if($modo=="vis")
-		echo utf8_encode($visual->fetch('adm/contratos_visualizar.tpl'));
+	$res = bdSelect(
+		"*",
+		$tabela,
+		"id=" . $id,
+		"",
+		$conexao
+	);
+	
+	$res = bdQuery("
+		SELECT
+			(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS cliente,
+			PRO.razaosocial AS provedor,
+			CLI.complemento,
+			PLA.nome AS plano,
+			GRU.nome_padrao AS grupo,
+			PLA.nome AS plano,
+			PER.nome AS periodo,
+			CON.*
+		FROM contratos CON
+			INNER JOIN provedores PRO ON CON.provedor_id = PRO.id
+			INNER JOIN clientes CLI ON CON.cliente_id = CLI.id
+			INNER JOIN planos PLA ON CON.plano_id = PLA.id
+			INNER JOIN grupos GRU ON CON.grupo_id = GRU.id
+			INNER JOIN periodos PER ON CON.periodo_id = PER.id
+		WHERE CON.id=" . $id . "
+		ORDER BY grupo,cliente",
+		$conexao
+	);
+	
+	if (!bdNumReg($res))
+		die("Nenhum registro para o ID '" . $id . "'");
+	
+	$visual->assign('campos',mysql_fetch_assoc($res));
+	echo utf8_encode($visual->fetch('adm/contratos_visualizar.tpl'));
 }
 else if ($modo=="exc")
 {
