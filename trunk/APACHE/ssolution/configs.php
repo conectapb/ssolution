@@ -1,4 +1,8 @@
 <?
+// Report all errors except E_NOTICE
+// This is the default value set in php.ini
+error_reporting(E_ALL ^ E_NOTICE);
+
 session_start();
 // VARIAVEIS GERAIS
 define('PROJECTNAME','ssolution');
@@ -8,9 +12,11 @@ include("libs/debuglib.php");
 $thispage = $_SERVER['SCRIPT_NAME'];
 $querystring = $_SERVER['QUERY_STRING'];
 
-$rede_smart = explode(".",$_SERVER['HTTP_HOST']);
+$rede_smart = "10.10.11";
+$rede_atual = explode(".",$_SERVER['HTTP_HOST']);
+$rede_atual = $rede_atual[0].".".$rede_atual[1].".".$rede_atual[2];
 
-if ($_SERVER['HTTP_HOST']=="localhost" || $rede_smart[1] = 12 ){
+if ($_SERVER['HTTP_HOST']=="localhost" || $rede_atual == $rede_smart ){
 	/* LOCAL*/
 	$host = "localhost";
 	$database = "ssolution";
@@ -25,12 +31,15 @@ if ($_SERVER['HTTP_HOST']=="localhost" || $rede_smart[1] = 12 ){
 else
 {
 	/* ONLINE */
-	$host = "";
-	$uppdir = "";
-	$database = "";
-	$user = "";
-	$pass = "";
-	$smartydir = "";
+	$host = "localhost";
+	$database = "smartsol_sistema";
+	$user = "smartsol_sistema";
+	$pass = "iguarassu";
+	$uppdir = $_SERVER['DOCUMENT_ROOT'] . '/uploads/';
+	$smartydir = $_SERVER['DOCUMENT_ROOT'] . '/libs/smarty/libs/';
+	$phpgacldir = $_SERVER['DOCUMENT_ROOT'] . '/libs/phpgacl/';
+	$logdir = $_SERVER['DOCUMENT_ROOT'] . '/logs/';
+	$sqllogfile = $logdir . "sql_%date%.log";
 }
 
 // Tentando criar o hábito de usar constantes =)
@@ -88,11 +97,11 @@ $visual->assign('tpl_adm_style',$visual->template_dir."/adm/style" . $_SESSION['
 $visual->assign('querystring',$querystring);
 
 // INICIALIZACAO DO phpGACL
-require_once($phpgacldir . 'gacl.class.php');
+/*require_once($phpgacldir . 'gacl.class.php');
 require_once($phpgacldir . 'gacl_api.class.php');
 require_once($phpgacldir . 'admin/gacl_admin.inc.php');
 
-$gacl = new gacl($gacl_options);
+$gacl = new gacl($gacl_options);*/
 
 /* #################################
    ### FUNCOES DE BANCO DE DADOS ###

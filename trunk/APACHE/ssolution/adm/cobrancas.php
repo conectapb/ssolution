@@ -247,6 +247,7 @@ else if($modo=="lst")
 
 else if($modo=="emissao")
 {
+	$intervalo = 10;
 	$grupo = $_REQUEST['grupo'];
 	$data_atual=getdate();
 	
@@ -256,6 +257,7 @@ else if($modo=="emissao")
 	$periodo_ini = date("Y-m-d", mktime  (0, 0, 0, $mes,1,$ano));
 	$periodo_fim = date("Y-m-d", mktime  (0, 0, 0, $mes+1,0,$ano));
 	
+	/*
 	// pegue todos os contratos que nao tem boleto emitido no periodo designado
 	$sql = "
 		SELECT
@@ -281,6 +283,7 @@ else if($modo=="emissao")
 	print_a($nao_emitidos);
 		
 	$visual->display('adm/cobrancas_listagem_periodo.tpl');
+	*/
 }
 else if($modo=="emitidos")
 {
