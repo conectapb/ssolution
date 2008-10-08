@@ -121,6 +121,11 @@
 			<script>document.frm.vencimento_padrao.value="{$campos.vencimento_padrao[4]}";</script>
 		</td>
 	</tr>
+    
+    <tr>
+		<td class="rotulos">Valor Padrão: <small>R$</small></td>
+		<td><input type="text" class="text_normal" name="valor_padrao" value="{$campos.valor_padrao[4]}" style="width:80px;" /></td>
+	</tr>
 	
 	<tr>
 		<td class="rotulos" valign="top">Observações :</td>

@@ -49,7 +49,7 @@ if ($processa=="ok")
 		"grupo_id" => array("grupo_id","Grupo","selecao","requerido",$_REQUEST['grupo_id']),
 		"descricao" => array("descricao","Descrição","varchar","não-requerido",$_REQUEST['descricao']),
 		"data_inicio" => array("data_inicio","Data Início","data","nao-requerido",data_server($_REQUEST['data_inicio'])),
-		"data_termino" => array("data_termino","Data Término","data","não-requerido",data_server($_REQUEST['data_termino'])),
+		"data_termino" => array("data_termino","Data Término","data","não-requerido",data_server($_REQUEST['data_termino'],TRUE)),
 		"periodo_id" => array("periodo_id","Período padrão","selecao","requerido",$_REQUEST['periodo_id']),
 		"vencimento_padrao" => array("vencimento_padrao","Vencimento Padrao","numero","não-requerido",$_REQUEST['vencimento_padrao']),
 		"valor_padrao" => array("valor_padrao","Valor Padrao","numero","não-requerido",double_server($_REQUEST['valor_padrao'])),
@@ -172,7 +172,7 @@ else if ($modo=="alt")
 		"data_termino" =>		array("data_termino","Data Término","data","não-requerido",$valores['data_termino']),
 		"periodo_id" =>			array("periodo_id","Período padrão","selecao","requerido",$valores['periodo_id']),
 		"vencimento_padrao" =>	array("vencimento_padrao","Vencimento Padrao","numero","não-requerido",$valores['vencimento_padrao']),
-		"valor_padrao" =>		array("valor_padrao","Valor Padrao","numero","não-requerido",$valores['valor_padrao']),
+		"valor_padrao" =>		array("valor_padrao","Valor Padrao","numero","não-requerido",double($valores['valor_padrao'])),
 		"ativo" =>				array("ativo","Contrato Ativo","checkbox","requerido",$valores['ativo']),
 		"observacoes" =>		array("observacoes","Observações","varchar","não-requerido",$valores['observacoes'])
 	);

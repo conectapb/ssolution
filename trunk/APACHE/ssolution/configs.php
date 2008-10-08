@@ -256,13 +256,16 @@ function data($string)
 }
 
 // modo gambiarra de fazer a transformacao dd/mm/yyyy => yyyy-mm-dd
-function data_server($string)
+function data_server($string,$vazio_null=FALSE)
 {
 	//dd/mm/aaaa
 	//0123456789
 	if($string!="" && $string!="0000-00-00 00:00:00")
 		return substr($string,6,4) . "-" . substr($string,3,2) . "-" . substr($string,0,2);
-	return "";
+	if($vazio_null)
+		return NULL;
+	else
+		return "";
 }
 
 // retorna 0 uma data valida no formato DD/MM/AAAA, ou outro numero para informar erro
