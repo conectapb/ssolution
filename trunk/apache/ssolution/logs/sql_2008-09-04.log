@@ -1,0 +1,4 @@
+1220528387	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1220528387	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1220529342	UPDATE clientes SET codigo='06029',tipo='1',nome='Mario Eduardo Martins Lopes',nascimento='1988-08-16',rg='9.637.795-9 / PR',cpf='059.007.649-31',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='4',endereco='Av. Sete de Setembro',numero='3293',complemento_tipo='Ap.',bloco='',complemento='1106',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='4391423330',tel_celular2='',site='',email1='dudupinhal@hotmail.com',email2='',email3='',observacoes='' WHERE id=144
+1220529342	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Alterado Cliente ID=144 Nome=Mario Eduardo Martins Lopes','')

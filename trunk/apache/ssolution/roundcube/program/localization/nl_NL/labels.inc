@@ -1,0 +1,224 @@
+<?php
+
+/*
+
++-----------------------------------------------------------------------+
+| language/nl_NL/labels.inc                                             |
+|                                                                       |
+| Language file of the RoundCube Webmail client                         |
+| Copyright (C) 2005-2008, RoundCube Dev. - Switzerland                 |
+| Licensed under the GNU GPL                                            |
+|                                                                       |
++-----------------------------------------------------------------------+
+| Author: Mark Moses <mark@katmoda.com>                                 |
++-----------------------------------------------------------------------+
+
+@version $Id: labels.inc 1402 2008-05-19 07:50:25Z alec $
+
+*/
+
+$labels = array();
+$labels['welcome'] = 'Welkom bij $product';
+$labels['username'] = 'Gebruikersnaam';
+$labels['password'] = 'Wachtwoord';
+$labels['server'] = 'Server';
+$labels['login'] = 'Inloggen';
+$labels['logout'] = 'Uitloggen';
+$labels['mail'] = 'E-Mail';
+$labels['settings'] = 'Persoonlijke Instellingen';
+$labels['addressbook'] = 'Adresboek';
+$labels['inbox'] = 'Postvak IN';
+$labels['drafts'] = 'Concepten';
+$labels['sent'] = 'Verzonden';
+$labels['trash'] = 'Prullenbak';
+$labels['junk'] = 'Spam';
+$labels['subject'] = 'Onderwerp';
+$labels['from'] = 'Afzender';
+$labels['to'] = 'Ontvanger';
+$labels['cc'] = 'Kopie';
+$labels['bcc'] = 'Bcc';
+$labels['replyto'] = 'Antwoord-aan';
+$labels['date'] = 'Datum';
+$labels['size'] = 'Grootte';
+$labels['priority'] = 'Prioriteit';
+$labels['organization'] = 'Organisatie';
+$labels['reply-to'] = 'Antwoord-aan';
+$labels['mailboxlist'] = 'Mappen';
+$labels['messagesfromto'] = 'Bericht $from t/m $to van $count';
+$labels['messagenrof'] = 'Bericht $nr van $count';
+$labels['moveto'] = 'verplaats naar...';
+$labels['download'] = 'download';
+$labels['filename'] = 'Bestandsnaam';
+$labels['filesize'] = 'Bestandsgrootte';
+$labels['preferhtml'] = 'Toon HTML';
+$labels['htmlmessage'] = 'HTML Bericht';
+$labels['prettydate'] = 'Opgemaakte datums';
+$labels['addtoaddressbook'] = 'Toevoegen aan adresboek';
+$labels['sun'] = 'Zo';
+$labels['mon'] = 'Ma';
+$labels['tue'] = 'Di';
+$labels['wed'] = 'Wo';
+$labels['thu'] = 'Do';
+$labels['fri'] = 'Vr';
+$labels['sat'] = 'Za';
+$labels['sunday'] = 'Zondag';
+$labels['monday'] = 'Maandag';
+$labels['tuesday'] = 'Dinsdag';
+$labels['wednesday'] = 'Woensdag';
+$labels['thursday'] = 'Donderdag';
+$labels['friday'] = 'Vrijdag';
+$labels['saturday'] = 'Zaterdag';
+$labels['jan'] = 'Jan';
+$labels['feb'] = 'Feb';
+$labels['mar'] = 'Mrt';
+$labels['apr'] = 'Apr';
+$labels['may'] = 'Mei';
+$labels['jun'] = 'Jun';
+$labels['jul'] = 'Jul';
+$labels['aug'] = 'Aug';
+$labels['sep'] = 'Sep';
+$labels['oct'] = 'Okt';
+$labels['nov'] = 'Nov';
+$labels['dec'] = 'Dec';
+$labels['longjan'] = 'Januari';
+$labels['longfeb'] = 'Februari';
+$labels['longmar'] = 'Maart';
+$labels['longapr'] = 'April';
+$labels['longmay'] = 'Mei';
+$labels['longjun'] = 'Juni';
+$labels['longjul'] = 'Juli';
+$labels['longaug'] = 'Augustus';
+$labels['longsep'] = 'September';
+$labels['longoct'] = 'Oktober';
+$labels['longnov'] = 'November';
+$labels['longdec'] = 'December';
+$labels['today'] = 'Vandaag';
+$labels['checkmail'] = 'Controleer op nieuwe berichten';
+$labels['writenewmessage'] = 'Maak een nieuw bericht';
+$labels['replytomessage'] = 'Beantwoord het bericht';
+$labels['replytoallmessage'] = 'Beantwoord alle ontvangers';
+$labels['forwardmessage'] = 'Bericht doorsturen';
+$labels['deletemessage'] = 'Verwijder het bericht';
+$labels['movemessagetotrash'] = 'Verplaats het bericht naar de prullenbak';
+$labels['printmessage'] = 'Dit bericht afdrukken';
+$labels['previousmessage'] = 'Toon het vorige bericht';
+$labels['previousmessages'] = 'Toon vorige lijst met berichten';
+$labels['firstmessage'] = 'Toon het eerste bericht';
+$labels['firstmessages'] = 'Toon eerste lijst met berichten';
+$labels['nextmessage'] = 'Toon het volgende bericht';
+$labels['nextmessages'] = 'Toon volgende lijst met berichten';
+$labels['lastmessage'] = 'Toon het laatste bericht';
+$labels['lastmessages'] = 'Toon laatste lijst met berichten';
+$labels['backtolist'] = 'Terug naar berichtenoverzicht';
+$labels['viewsource'] = 'Toon bron';
+$labels['markmessages'] = 'Markeer berichten';
+$labels['markread'] = 'Gelezen';
+$labels['markunread'] = 'Ongelezen';
+$labels['select'] = 'Selecteer';
+$labels['all'] = 'Allemaal';
+$labels['none'] = 'Geen';
+$labels['unread'] = 'Ongelezen';
+$labels['compact'] = 'Compact';
+$labels['empty'] = 'Legen';
+$labels['purge'] = 'Purge';
+$labels['quota'] = 'Schijfruimte gebruik';
+$labels['unknown'] = 'onbekend';
+$labels['unlimited'] = 'onbeperkt';
+$labels['quicksearch'] = 'Snel zoeken';
+$labels['resetsearch'] = 'Reset zoekopdracht';
+$labels['compose'] = 'Maak een bericht';
+$labels['savemessage'] = 'Bewaar als concept';
+$labels['sendmessage'] = 'Verstuur het bericht nu';
+$labels['addattachment'] = 'Voeg een bijlage toe';
+$labels['charset'] = 'Karakterset';
+$labels['editortype'] = 'Opmaak';
+$labels['returnreceipt'] = 'Ontvangstbevestiging';
+$labels['checkspelling'] = 'Controleer spelling';
+$labels['resumeediting'] = 'Doorgaan met opstellen';
+$labels['revertto'] = 'Wijzig terug in';
+$labels['attachments'] = 'Bijlages';
+$labels['upload'] = 'Toevoegen';
+$labels['close'] = 'Sluit';
+$labels['low'] = 'Laag';
+$labels['lowest'] = 'Laagste';
+$labels['normal'] = 'Normaal';
+$labels['high'] = 'Hoog';
+$labels['highest'] = 'Hoogste';
+$labels['nosubject'] = '(geen onderwerp)';
+$labels['showimages'] = 'Toon afbeeldingen';
+$labels['htmltoggle'] = 'HTML';
+$labels['plaintoggle'] = 'Gewone tekst';
+$labels['addcc'] = 'Kopie toevoegen';
+$labels['addbcc'] = 'Bcc toevoegen';
+$labels['addreplyto'] = 'Antwoord-aan toevoegen';
+$labels['mdnrequest'] = 'De afzender van dit bericht heeft gevraagd of er een melding kan worden verzonden als dit bericht is ontvangen. Wilt u de melding verzenden?';
+$labels['receiptread'] = 'Ontvangstbevestiging (gelezen)';
+$labels['yourmessage'] = 'Dit is een ontvangstbevestiging voor uw bericht';
+$labels['receiptnote'] = 'Let op: Deze bevestigt alleen dat uw bericht bij de geaddresseerde is binnen gekomen. Er is geen garantie dat de geaddresseerde het bericht daadwerkelijk heeft gelezen of de inhoud heeft begrepen.';
+$labels['name'] = 'Naam';
+$labels['firstname'] = 'Voornaam';
+$labels['surname'] = 'Achternaam';
+$labels['email'] = 'E-Mail';
+$labels['addcontact'] = 'Voeg geselecteerde contacten toe aan het adresboek';
+$labels['editcontact'] = 'Contactpersoon wijzigen';
+$labels['edit'] = 'Wijzig';
+$labels['cancel'] = 'Annuleer';
+$labels['save'] = 'Opslaan';
+$labels['delete'] = 'Verwijder';
+$labels['newcontact'] = 'Voeg een nieuwe contactpersoon toe';
+$labels['deletecontact'] = 'Verwijder geselecteerde contacten';
+$labels['composeto'] = 'Stuur een bericht naar';
+$labels['contactsfromto'] = 'Contacten $from t/m $to van $count';
+$labels['print'] = 'Afdrukken';
+$labels['export'] = 'Exporteren';
+$labels['previouspage'] = 'Vorige pagina';
+$labels['firstpage'] = 'Eerste pagina';
+$labels['nextpage'] = 'Volgende pagina';
+$labels['lastpage'] = 'Laatste pagina';
+$labels['groups'] = 'Groepen';
+$labels['personaladrbook'] = 'Persoonlijk Adresboek';
+$labels['settingsfor'] = 'Instellingen voor';
+$labels['preferences'] = 'Instellingen';
+$labels['userpreferences'] = 'Gebruikers instellingen';
+$labels['editpreferences'] = 'Wijzig gebruikers instellingen';
+$labels['identities'] = 'Identititeiten';
+$labels['manageidentities'] = 'Beheer identiteiten voor dit account';
+$labels['newidentity'] = 'Identiteit toevoegen';
+$labels['newitem'] = 'Nieuw item';
+$labels['edititem'] = 'Wijzig item';
+$labels['setdefault'] = 'Stel als standaard in';
+$labels['language'] = 'Taal';
+$labels['timezone'] = 'Tijdszone';
+$labels['pagesize'] = 'Rijen per pagina';
+$labels['signature'] = 'Onderschrift';
+$labels['dstactive'] = 'Zomertijd';
+$labels['htmleditor'] = 'Maak HTML berichten aan';
+$labels['htmlsignature'] = 'HTML onderschrift';
+$labels['previewpane'] = 'Toon voorbeeldvenster';
+$labels['logoutclear'] = 'Prullenbak legen bij uitloggen';
+$labels['logoutcompact'] = 'Postvak IN opschonen bij uitloggen';
+$labels['uisettings'] = 'Gebruikers Interface';
+$labels['serversettings'] = 'Server Instellingen';
+$labels['askuser'] = 'vraag de gebruiker';
+$labels['autosend'] = 'stuur automatisch';
+$labels['ignore'] = 'negeer';
+$labels['readwhendeleted'] = 'Markeer het bericht na verwijderen als gelezen';
+$labels['autosavedraft'] = 'Concept automatisch opslaan';
+$labels['everynminutes'] = 'iedere $n minuten';
+$labels['never'] = 'nooit';
+$labels['folder'] = 'Map';
+$labels['folders'] = 'Mappen';
+$labels['foldername'] = 'Mapnaam';
+$labels['subscribed'] = 'Geabonneerd';
+$labels['messagecount'] = 'Berichten';
+$labels['create'] = 'Nieuw';
+$labels['createfolder'] = 'Maak nieuwe map';
+$labels['rename'] = 'Wijzig naam';
+$labels['renamefolder'] = 'Wijzig mapnaam';
+$labels['deletefolder'] = 'Verwijder map';
+$labels['managefolders'] = 'Beheer mappen';
+$labels['sortby'] = 'Sorteer op';
+$labels['sortasc'] = 'Sorteer oplopend';
+$labels['sortdesc'] = 'Sorteer aflopend';
+
+?>

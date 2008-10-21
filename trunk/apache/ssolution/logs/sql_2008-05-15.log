@@ -1,0 +1,8 @@
+1210854077	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1210854077	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1210854247	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('101019','0','ELDER SHIGUEMATSU','1985-03-16','7.750.715-9 PR','058.673.579-88','M','','','','','','12','R Marechal Otï¿½vio Saldanha Mazza','7777','Ap.','','44','Pinheirinho','','Curitiba','PR','4130158836','','','','','','','','','Instalação em 15/05/08')
+1210854247	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Cadastro Cliente ID=131 Nome=ELDER SHIGUEMATSU','')
+1210857984	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1210857984	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1210883195	UPDATE clientes SET codigo='08008',tipo='0',nome='Lucas Nunes da Silveira',nascimento='1111-11-11',rg='1111111111',cpf='038.062.189-43',sexo='M',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='3',endereco='Rua Alferes Poli',numero='294',complemento_tipo='Ap.',bloco='',complemento='903',bairro='Centro',cep='80.230-090',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='4196470837',tel_celular2='',site='',email1='lucasn_silveira@hotmail.com',email2='',email3='',observacoes='' WHERE id=13
+1210883195	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Alterado Cliente ID=13 Nome=Lucas Nunes da Silveira','')

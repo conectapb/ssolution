@@ -1,0 +1,192 @@
+<?php
+
+/*
+ +-----------------------------------------------------------------------+
+ | program/steps/mail/show.inc                                           |
+ |                                                                       |
+ | This file is part of the RoundCube Webmail client                     |
+ | Copyright (C) 2005-2008, RoundCube Dev. - Switzerland                 |
+ | Licensed under the GNU GPL                                            |
+ |                                                                       |
+ | PURPOSE:                                                              |
+ |   Display a mail message similar as a usual mail application does     |
+ |                                                                       |
+ +-----------------------------------------------------------------------+
+ | Author: Thomas Bruederli <roundcube@gmail.com>                        |
+ +-----------------------------------------------------------------------+
+
+ $Id: show.inc 1400 2008-05-17 17:46:43Z thomasb $
+
+*/
+
+$PRINT_MODE = $RCMAIL->action=='print' ? TRUE : FALSE;
+
+// similar code as in program/steps/mail/get.inc
+if ($_GET['_uid']) {
+  $MESSAGE = new rcube_message(get_input_value('_uid', RCUBE_INPUT_GET));
+  
+  // set message charset as default
+  if (!empty($MESSAGE->headers->charset))
+    $IMAP->set_charset($MESSAGE->headers->charset);
+
+  // go back to list if message not found (wrong UID)
+  if (empty($MESSAGE->headers)) {
+    $OUTPUT->show_message('messageopenerror', 'error');
+    if ($RCMAIL->action=='preview' && template_exists('messagepreview'))
+        $OUTPUT->send('messagepreview');
+    else {
+      $RCMAIL->action = 'list';
+      return;
+    }
+  }
+    
+  $mbox_name = $IMAP->get_mailbox_name();
+  
+  // calculate Etag for this request
+  $etag = md5($MESSAGE->uid.$mbox_name.session_id().intval($MESSAGE->headers->mdn_sent).intval($MESSAGE->is_safe).intval($PRINT_MODE));
+
+  // allow caching, unless remote images are present
+  if ((bool)$MESSAGE->is_safe)
+    send_nocacheing_headers();
+  else if (empty($CONFIG['devel_mode']))
+    send_modified_header($_SESSION['login_time'], $etag, !$MESSAGE->headers->seen);
+
+  $OUTPUT->set_pagetitle($MESSAGE->subject);
+  
+  // mark message as read
+  if (!$MESSAGE->headers->seen)
+  {
+    $marked = $IMAP->set_flag($MESSAGE->uid, 'SEEN');
+    if($RCMAIL->action == 'preview' && $marked != -1)
+    {
+      $OUTPUT->command('set_unread_count_from_preview', $mbox_name, $IMAP->messagecount($mbox_name, 'UNSEEN'), ($mbox_name == 'INBOX'));
+      $OUTPUT->command('mark_as_read_from_preview', $MESSAGE->uid);
+    }
+  }
+
+  // give message uid to the client
+  $OUTPUT->set_env('uid', $MESSAGE->uid);
+  $OUTPUT->set_env('safemode', $MESSAGE->is_safe);
+  
+  // check for unset disposition notification
+  if ($MESSAGE->headers->mdn_to && !$MESSAGE->headers->mdn_sent &&
+      $mbox_name != $CONFIG['drafts_mbox'] && $mbox_name != $CONFIG['sent_mbox'])
+  {
+    if (intval($CONFIG['mdn_requests']) === 1)
+    {
+      if (rcmail_send_mdn($MESSAGE->uid))
+        $OUTPUT->show_message('receiptsent', 'confirmation');
+    }
+    else if (empty($CONFIG['mdn_requests']))
+    {
+      rcube_add_label('mdnrequest');
+      $OUTPUT->set_env('mdn_request', true);
+    }
+  }
+
+
+  $next = $prev = $first = $last = -1;
+  // get previous, first, next and last message UID
+  if ((!($_SESSION['sort_col'] == 'date' && $_SESSION['sort_order'] == 'DESC') &&
+      $IMAP->get_capability('sort')) || !empty($_REQUEST['_search']))
+    {
+    // Only if we use custom sorting
+    $a_msg_index = $IMAP->message_index(NULL, $_SESSION['sort_col'], $_SESSION['sort_order']);
+ 
+    $MESSAGE->index = array_search((string)$MESSAGE->uid, $a_msg_index, TRUE);
+    $prev = isset($a_msg_index[$MESSAGE->index-1]) ? $a_msg_index[$MESSAGE->index-1] : -1 ;
+    $first = count($a_msg_index)>0 ? $a_msg_index[0] : -1;
+    $next = isset($a_msg_index[$MESSAGE->index+1]) ? $a_msg_index[$MESSAGE->index+1] : -1 ;
+    $last = count($a_msg_index)>0 ? $a_msg_index[count($a_msg_index)-1] : -1;
+    }
+  else
+    {
+    // this assumes that we are sorted by date_DESC
+    $seq = $IMAP->get_id($MESSAGE->uid);
+    $prev = $IMAP->get_uid($seq + 1);
+    $first = $IMAP->get_uid($IMAP->messagecount());
+    $next = $IMAP->get_uid($seq - 1);
+    $last = $IMAP->get_uid(1);
+    $MESSAGE->index = $IMAP->messagecount() - $seq;
+    }
+  
+  if ($prev > 0)
+    $OUTPUT->set_env('prev_uid', $prev);
+  if ($first >0)
+    $OUTPUT->set_env('first_uid', $first);
+  if ($next > 0)
+    $OUTPUT->set_env('next_uid', $next);
+  if ($last >0)
+    $OUTPUT->set_env('last_uid', $last);
+  }
+
+
+
+function rcmail_message_attachments($attrib)
+{
+  global $PRINT_MODE, $MESSAGE;
+  
+  $out = $ol = '';
+
+  if (sizeof($MESSAGE->attachments)) {
+    foreach ($MESSAGE->attachments as $attach_prop) {
+      if ($PRINT_MODE) {
+        $ol .= html::tag('li', null, sprintf("%s (%s)", Q($attach_prop->filename), Q(show_bytes($attach_prop->size))));
+      }
+      else {
+        $ol .= html::tag('li', null,
+          html::a(array(
+            'href' => $MESSAGE->get_part_url($attach_prop->mime_id),
+            'onclick' => sprintf(
+              'return %s.command(\'load-attachment\',{part:\'%s\', mimetype:\'%s\'},this)',
+              JS_OBJECT_NAME,
+              $attach_prop->mime_id,
+              $attach_prop->mimetype),
+            ),
+            Q($attach_prop->filename)));
+      }
+    }
+
+    $out = html::tag('ul', $attrib, $ol, html::$common_attrib);
+  } 
+  
+  return $out;
+}
+
+
+
+function rcmail_remote_objects_msg($attrib)
+  {
+  global $CONFIG, $OUTPUT;
+  
+  if (!$attrib['id'])
+    $attrib['id'] = 'rcmremoteobjmsg';
+
+  // allow the following attributes to be added to the <div> tag
+  $attrib_str = create_attrib_string($attrib, array('style', 'class', 'id'));
+  $out = '<div' . $attrib_str . ">";
+  
+  $out .= sprintf('%s&nbsp;<a href="#loadimages" onclick="%s.command(\'load-images\')">%s</a>',
+                  Q(rcube_label('blockedimages')),
+                  JS_OBJECT_NAME,
+                  Q(rcube_label('showimages')));
+  
+  $out .= '</div>';
+  
+  $OUTPUT->add_gui_object('remoteobjectsmsg', $attrib['id']);
+  return $out;
+  }
+
+
+$OUTPUT->add_handlers(array(
+  'messageattachments' => 'rcmail_message_attachments',
+  'blockedobjects' => 'rcmail_remote_objects_msg'));
+
+
+if ($RCMAIL->action=='print' && template_exists('printmessage'))
+  $OUTPUT->send('printmessage');
+else if ($RCMAIL->action=='preview' && template_exists('messagepreview'))
+    $OUTPUT->send('messagepreview');
+else
+  $OUTPUT->send('message');
+?>

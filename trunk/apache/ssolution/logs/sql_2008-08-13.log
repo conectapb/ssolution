@@ -1,0 +1,7 @@
+1218631749	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1218631750	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1218632124	UPDATE titulos SET cliente_id='8',contrato_id='24',referencia_mes='7',referencia_ano='2008',periodo_inicio='2008-07-10',periodo_fim='2008-08-09',vencimento='2008-08-10',codigo='243524',status_id='1',valor='45.00',observacoes='bfd fnb fdg df hfd  hgf' WHERE id=1
+1218632124	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=1 Nome=','')
+1218633234	INSERT INTO clientes_status(nome) VALUES('Ativo')
+1218633261	INSERT INTO clientes_status(nome) VALUES('Inativo')
+1218633360	INSERT INTO clientes_status(nome) VALUES('Pré-cadastro')

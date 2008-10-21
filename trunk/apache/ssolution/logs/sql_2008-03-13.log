@@ -1,0 +1,17 @@
+1205416371	UPDATE clientes SET codigo='00007',nome='Federação Paranaense de Ginástica',nascimento='2008-03-13',rg='',cpf='00.417.081/0001-20',sexo='',grupo_id='10',endereco='Rua Profª Antonia Reginatto Viana',numero='921',complemento_tipo='',bloco='',complemento='',bairro='',cep='',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='',tel_celular2='',site='',email1='',email2='',email3='',observacoes='' WHERE id=115
+1205416371	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=115 Nome=Federação Paranaense de Ginástica','')
+1205416454	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='8',grupo_id='3',data_inicio='2008-01-14',data_termino='2009-01-14',vencimento_padrao='10',ativo='1',observacoes='' WHERE id=6
+1205423379	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1205423379	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1205426094	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Logout','')
+1205442074	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1205442074	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1205443334	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Logout','')
+1205443766	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1205443766	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1205443854	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Logout','')
+1205448257	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
+1205448257	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1205448353	UPDATE clientes SET codigo='08009',nome='Rebeca Garcia Martins',nascimento='1985-09-28',rg='86702789 PR',cpf='046.373.099-21',sexo='F',grupo_id='3',endereco='Rua Alferes Poli',numero='294',complemento_tipo='Ap.',bloco='',complemento='1402',bairro='Centro',cep='80.230-090',cidade='Curitiba',uf='PR',tel_residencial='4132336364',tel_comercial='',fax='',tel_celular1='',tel_celular2='',site='',email1='',email2='',email3='',observacoes='' WHERE id=15
+1205448353	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Alterado Cliente ID=15 Nome=Rebeca Garcia Martins','')
+1205462039	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Logout','')

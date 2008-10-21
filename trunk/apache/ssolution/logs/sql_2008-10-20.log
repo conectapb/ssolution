@@ -1,0 +1,8 @@
+1224507357	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1224507357	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1224539747	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1224539747	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1224539896	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1224539896	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1224540776	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('90003','1','LAIRA TABATA DE CAMPOS','1987-01-19','7.750.739-6 / PR','056.590.029-35','2','','','','','','14','AV VISCONDE DE GUARAPUVA','3084','Ap.','','702','Centro','','Curitiba','PR','','','','','','','lalitabata@hotmail.com','','','concedido desconto de 25% para o periodo de teste de 30 dias, iniciado em 20/10.')
+1224540776	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=157 Nome=LAIRA TABATA DE CAMPOS','')

@@ -1,0 +1,1 @@
+1211984485	INSERT INTO contatos(nome,empresa,tipo,edificio,endereco,numero,complemento,bairro,cep,cidade,uf,telefone1,telefone2,celular1,celular2,email1,email2,observacoes) VALUES('Arão','','sindico','Edificio Ibiza','Rua Itatiaia','1560','AP 103','Portão','81070100','Curitiba','PR','4130390123','','','','','','condominio em que o Rogerio mora')

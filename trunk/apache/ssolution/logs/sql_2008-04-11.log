@@ -1,0 +1,4 @@
+1207917970	UPDATE admins SET ultacesso_ip='10.12.7.3',ultacesso=NOW() WHERE id=2
+1207917970	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1207923381	UPDATE clientes SET codigo='06004',tipo='0',nome='Rubia Souza Pimenta de Padua',nascimento='2008-04-11',rg='7211934-7 / PR',cpf='037.036.639-52',sexo='F',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='4',endereco='Av. Sete de Setembro',numero='3293',complemento_tipo='Ap.',bloco='',complemento='108',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='4136425555',fax='',tel_celular1='4199570561',tel_celular2='',site='',email1='rupimenta@gmail.com',email2='',email3='',observacoes='re-ativado em 11/04/08 para ser cobrado a partir de 10/05/08' WHERE id=63
+1207923381	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Alterado Cliente ID=63 Nome=Rubia Souza Pimenta de Padua','')

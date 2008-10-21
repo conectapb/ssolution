@@ -1,0 +1,13 @@
+1217332832	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1217332832	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1217333935	UPDATE clientes SET codigo='06027',tipo='1',nome='William Roberto Kalinski',nascimento='1985-08-30',rg='8005648-6',cpf='049.679.799-98',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='4',endereco='Av. Sete de Setembro',numero='3293',complemento_tipo='Ap.',bloco='',complemento='203',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',tel_residencial='4136795689',tel_comercial='',fax='',tel_celular1='4196663355',tel_celular2='',site='',email1='williamroberto_ctba@yaoo.com.br',email2='',email3='',observacoes='* tlf > recados com elaine
+agendamento p/ 29/07 as 10h00 
+plano smart200, tx instalação R$ 60,00 p/ 10/08.
+' WHERE id=140
+1217333935	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=140 Nome=William Roberto Kalinski','')
+1217334001	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,valor_padrao,ativo,observacoes) VALUES('','','5','7','140','4','2008-07-29','','4','10','','1','')
+1217334339	UPDATE clientes SET codigo='06027',tipo='1',nome='William Roberto Kalinski',nascimento='1985-08-30',rg='8005648-6',cpf='049.679.799-98',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='4',endereco='Av. Sete de Setembro',numero='3293',complemento_tipo='Ap.',bloco='',complemento='203',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',tel_residencial='4136795689',tel_comercial='',fax='',tel_celular1='4196663355',tel_celular2='',site='',email1='williamroberto_ctba@yahoo.com.br',email2='',email3='',observacoes='* tlf > recados com elaine
+agendamento p/ 29/07 as 10h00 
+plano smart200, tx instalação R$ 60,00 p/ 10/08.
+' WHERE id=140
+1217334339	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=140 Nome=William Roberto Kalinski','')

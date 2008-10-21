@@ -1,0 +1,8 @@
+1213709130	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1213709130	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1213711248	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
+1213711248	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1213711304	UPDATE clientes SET codigo='03008',tipo='1',nome='Adriano Noedinger da Silva',nascimento='',rg='',cpf='030.070.919-69',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='6',endereco='Rua Brasílio Itiberê',numero='2455',complemento_tipo='Ap.',bloco='',complemento='43 B',bairro='Rebouças',cep='80230-050',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='',tel_celular2='',site='',email1='',email2='',email3='',observacoes='Cunhado do Edison Pudim' WHERE id=37
+1213711304	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Alterado Cliente ID=37 Nome=Adriano Noedinger da Silva','')
+1213711319	UPDATE clientes SET codigo='03008',tipo='1',nome='Adriano Noedinger da Silva',nascimento='',rg='',cpf='030.070.919-69',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='6',endereco='Rua Brasílio Itiberê',numero='2455',complemento_tipo='Ap.',bloco='',complemento='43 B',bairro='Rebouças',cep='80230-050',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='',tel_celular2='',site='',email1='',email2='',email3='',observacoes='Cunhado do Edison Pudim' WHERE id=37
+1213711319	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Alterado Cliente ID=37 Nome=Adriano Noedinger da Silva','')

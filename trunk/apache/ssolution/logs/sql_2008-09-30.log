@@ -1,0 +1,5 @@
+1222782172	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1222782172	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1222784271	UPDATE contratos SET codigo='',descricao='Uma descrição para testar
+Uma descrição para testar',provedor_id='5',plano_id='1',cliente_id='31',grupo_id='6',data_inicio='2007-04-06',data_termino='2008-01-23',periodo_id='7',vencimento_padrao='10',valor_padrao='',ativo='',observacoes='Uma observação para testar
+Uma observação para testar' WHERE id=23

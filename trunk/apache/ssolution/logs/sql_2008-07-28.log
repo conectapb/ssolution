@@ -1,0 +1,10 @@
+1217249436	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1217249436	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1217271858	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
+1217271858	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1217272150	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('06027','1','William Roberto Kalinski','1985-08-30','8005648-6','049.679.799-98','1','','','','','','4','Av. Sete de Setembro','3293','Ap.','','203','Centro','80.230-010','Curitiba','PR','4136795689','','','4196663355','','','williamroberto_ctba@yaoo.com.br','','','* tlf > recados com elaine
+agendamento p/ 30/07 as 10h00 
+plano smart200, tx instalação R$ 60,00 p/ 10/08.
+')
+1217272150	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=140 Nome=William Roberto Kalinski','')
+1217272505	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Logout','')

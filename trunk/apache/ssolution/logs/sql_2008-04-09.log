@@ -1,0 +1,5 @@
+1207742665	UPDATE admins SET ultacesso_ip='10.12.7.13',ultacesso=NOW() WHERE id=3
+1207742665	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1207751662	UPDATE admins SET ultacesso_ip='10.12.7.3',ultacesso=NOW() WHERE id=2
+1207751662	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
+1207751788	INSERT INTO contatos(nome,empresa,tipo,edificio,endereco,numero,complemento,bairro,cep,cidade,uf,telefone1,telefone2,celular1,celular2,email1,email2,observacoes) VALUES('Basso Antenas','Empresa','distribuidor de antenas aquario','','','','','','','','PR','4133691133','','','','','','')

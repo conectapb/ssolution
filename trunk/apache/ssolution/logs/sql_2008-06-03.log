@@ -1,0 +1,11 @@
+1212494654	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1212494655	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1212494720	UPDATE grupos SET nome_padrao='EdRoma',codigo='06',tipo='1',nome='Edifício Roma',endereco='Av. Sete de Setembro',numero='3293',bairro='Centro',cep='80.230-010',cidade='Curitiba',uf='PR',observacoes='' WHERE id=4
+1212494772	UPDATE grupos SET nome_padrao='EdOrionis',codigo='101',tipo='1',nome='Edifí­cio Residencial Orionis',endereco='R Marechal Otávio Saldanha Mazza',numero='7777',bairro='Pinheirinho',cep='81150060',cidade='Curitiba',uf='PR',observacoes='Tel portaria 3247-0879
+
+Sindica Alexandra _tel esposo _ 9187 9082_' WHERE id=12
+1212494814	DELETE FROM grupos WHERE id=13
+1212527746	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1212527746	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1212528092	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1212528092	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
