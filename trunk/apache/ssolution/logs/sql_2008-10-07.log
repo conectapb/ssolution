@@ -1,7 +1,0 @@
-1223409649	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
-1223409649	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
-1223423411	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
-1223423411	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
-1223426290	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('04014','1','ALCIDES VIEIRA PINTO','1949-08-30','696.501 PR','059.610.339-53','1','','','','','','5','R. 24 de Maio','262','Ap.','','1004','Centro','80230-080','Curitiba','PR','','4132334137','4132334137','4199958760','','www.imobiliariavieira.com','alcides_vieira@ibest.com.br','','','instalação em 22/10/08;
-')
-1223426290	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=153 Nome=ALCIDES VIEIRA PINTO','')

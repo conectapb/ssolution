@@ -1,3 +1,0 @@
-1218285111	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
-1218285111	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1218291475	INSERT INTO contratos(codigo,descricao,provedor_id,plano_id,cliente_id,grupo_id,data_inicio,data_termino,periodo_id,vencimento_padrao,valor_padrao,ativo,observacoes) VALUES('','','5','1','144','4','2008-08-09','','7','10','','1','')

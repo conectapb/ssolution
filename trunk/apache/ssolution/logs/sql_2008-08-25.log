@@ -1,9 +1,0 @@
-1219670919	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
-1219670919	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
-1219671480	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('99010','1','Marcos Aurelio Tiago','1968-07-18','21.253.173-6 / SP','112.328.348-66','1','','','','','','9','Almirante Gonçalves','1537','','','CASA','Rebouças','80.230-060','Curitiba','PR','41','','','4184113715','','','','','','zaghor@msn.com
-VENCIMENTO TODO DIA 05
-')
-1219671480	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=147 Nome=Marcos Aurelio Tiago','')
-1219677345	INSERT INTO grupos(nome_padrao,codigo,tipo,nome,endereco,numero,bairro,cep,cidade,uf,observacoes) VALUES('HotSpot','90','99','HotSpot','','','','','','PR','')
-1219677642	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('99011','1','Maria Isabel Klosienski','1984-10-26','8524094-3 / PR','009.461.129-75','2','','','','','','9','Rua Almir Nelson de Almeida','330','Ap.','17','14','Campo Cumprido','81230220','','PR','4130150281','41','','4196389525','','','mariaklosienski@yahoo.com.br','belklosienski19@hotmail.com','','Condominio America do Sul')
-1219677642	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=148 Nome=Maria Isabel Klosienski','')

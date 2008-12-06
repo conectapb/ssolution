@@ -1,3 +1,0 @@
-1205842139	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
-1205842139	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
-1205878600	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Logout','')

@@ -1,4 +1,0 @@
-1211641996	UPDATE admins SET ultacesso_ip='10.12.7.8',ultacesso=NOW() WHERE id=2
-1211641996	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Login','')
-1211642571	UPDATE clientes SET codigo='04005',tipo='0',nome='Carlos Eduardo',nascimento='1911-11-11',rg='1237614 - PR',cpf='374.755.339-72',sexo='M',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='5',endereco='R. 24 de Maio',numero='262',complemento_tipo='',bloco='',complemento='806',bairro='Centro',cep='80230-080',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='41 3323-1863',fax='',tel_celular1='4184355587',tel_celular2='',site='',email1='drcarloseduardo@uol.com.br',email2='',email3='',observacoes='solicitado desligamento em 13/05/08' WHERE id=45
-1211642571	INSERT INTO logs_admin(login,mensagem,query) VALUES('antonio','Alterado Cliente ID=45 Nome=Carlos Eduardo','')

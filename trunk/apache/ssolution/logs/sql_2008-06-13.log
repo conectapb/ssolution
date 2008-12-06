@@ -1,6 +1,0 @@
-1213357984	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
-1213357984	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1213393412	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
-1213393412	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1213393529	UPDATE clientes SET codigo='101009',tipo='1',nome='Dieick Denner Gonçalves',nascimento='',rg='74123333',cpf='006.958.229-77',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='12',endereco='R Marechal Otávio Saldanha Mazza',numero='7777',complemento_tipo='Ap.',bloco='',complemento='151',bairro='Pinheirinho',cep='81150060',cidade='Curitiba',uf='PR',tel_residencial='41 3022-8903',tel_comercial='',fax='',tel_celular1='41 8859-4241',tel_celular2='41 9677-8533',site='',email1='dieick@yahoo.com.br',email2='',email3='',observacoes='' WHERE id=102
-1213393529	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=102 Nome=Dieick Denner Gonçalves','')

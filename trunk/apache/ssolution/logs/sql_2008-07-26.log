@@ -1,4 +1,0 @@
-1217074166	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
-1217074166	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1217095847	UPDATE clientes SET codigo='08015',tipo='1',nome='Marcilene Bier De Almeida',nascimento='1973-09-26',rg='4.988.380-3  SSP/PR',cpf='881.518.409-00',sexo='2',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='3',endereco='Rua Alferes Poli',numero='294',complemento_tipo='Ap.',bloco='',complemento='1202',bairro='Centro',cep='80.230-090',cidade='Curitiba',uf='PR',tel_residencial='(41) 3322-4762',tel_comercial='(41) 2106-6363',fax='',tel_celular1='(41) 9113-0883',tel_celular2='',site='',email1='marcilene@suzuki.ind.br',email2='',email3='',observacoes='Instalação agendada para sábado 26/07/08 09:00. Instalação efetuada' WHERE id=138
-1217095847	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=138 Nome=Marcilene Bier De Almeida','')

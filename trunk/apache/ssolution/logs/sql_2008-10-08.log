@@ -1,4 +1,0 @@
-1223472799	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
-1223472799	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1223474055	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='10',grupo_id='3',data_inicio='2008-01-14',data_termino='',periodo_id='7',vencimento_padrao='10',valor_padrao='0.00',ativo='1',observacoes='' WHERE id=8
-1223474342	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='1',cliente_id='7',grupo_id='3',data_inicio='2008-01-14',data_termino='',periodo_id='7',vencimento_padrao='20',valor_padrao='0.00',ativo='1',observacoes='' WHERE id=5

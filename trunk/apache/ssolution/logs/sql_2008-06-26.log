@@ -1,3 +1,0 @@
-1214481229	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
-1214481229	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1214492666	UPDATE grupos SET nome_padrao='EdBCapanema',codigo='51',tipo='1',nome='Condominio Residencial Barão de Capanema',endereco='',numero='',bairro='Jardim Botânico',cep='',cidade='Curitiba',uf='PR',observacoes='' WHERE id=11
