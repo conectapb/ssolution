@@ -1,7 +1,7 @@
 {include file=$tpl_adm_topo}
 {*debug*}
 
-<script language="javascript" src="{$tpl_dir}/js/jquery-1.2.2.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.tablesorter.pack.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.quicksearch.js"></script>
 
@@ -71,7 +71,7 @@ function chgVal($id,$op)
 	{
 		$formulario.modo.value="exc";
 		$formulario.id.value=$id;
-		if(confirm("Confirma Exclusão?"))
+		if(confirm("Confirma Exclusï¿½o?"))
 			$formulario.submit();
 	}
 	else
@@ -80,36 +80,6 @@ function chgVal($id,$op)
 		$formulario.id.value=$id;
 		$formulario.submit();
 	}
-}
-function ressetForm(id_form)
-{
-	form = document.getElementById(id_form);
-	for($i=0;$i<form.length-1;$i++)
-	{
-		if (form[$i].type=="text" || form[$i].type=="select-one")
-		{
-			form[$i].value="";
-		}
-		else
-		{
-			form[$i].checked=false;
-		}
-	}
-}
-function mostracampos(campo)
-{
-	cmp = document.getElementById(campo + "_div");
-	cmp.style.display = "block";
-	cmp2 = document.getElementById("abre_busca");
-	cmp2.innerHTML = "<a href=\"javascript:escondecampos('busca');\"><font size=\"-1\"><strong>[ Contrair Busca ]</strong></font></a>";
-}
-
-function escondecampos(campo)
-{
-	cmp = document.getElementById(campo + "_div");
-	cmp.style.display = "none";
-	cmp2 = document.getElementById("abre_busca");
-	cmp2.innerHTML = "<a href=\"javascript:mostracampos('busca');\"><font size=\"-1\"><strong>[ Expandir Busca ]</strong></font></a>";
 }
 
 {/literal}
@@ -147,7 +117,7 @@ function escondecampos(campo)
 {section name=i loop=$dados}
 
 	<tr bgcolor="{cycle values=#FFFFFF,#FAFAFA}">
-		<td class="td_content" align="center">{if $dados[i].ativo == 1}<img alt="Sim" src="{$tpl_dir}/images/check.jpg" width="14" height="14" />{else}<img alt="Não" src="{$tpl_dir}/images/block.jpg" width="14" height="14" />{/if}</td>
+		<td class="td_content" style="vertical-align:middle" align="center">{if $dados[i].ativo == 1}<img alt="Sim" src="{$tpl_dir}/images/check.jpg" width="14" height="14" border="0" />{else}<img alt="Nï¿½o" src="{$tpl_dir}/images/block.jpg" width="14" height="14" border="0" />{/if}</td>
 		<td nowrap class="td_content">{$dados[i].cliente}</td>
 		<td nowrap class="td_content">{$dados[i].grupo}</td>
         <td class="td_content">{$dados[i].complemento}</td>
@@ -164,12 +134,12 @@ function escondecampos(campo)
 	</tr>
 {sectionelse}
 	<tr>
-		<td colspan="5" align="center" class="td_content">Nenhum registro encontrado</td>
+		<td colspan="20" align="center" class="td_content">Nenhum registro encontrado</td>
 	</tr>
 {/section}
 {if $paginacao!=""}
 	<tr>
-		<TD colspan="5" align="center">
+		<TD colspan="20" align="center">
 			<table align="center" cellpadding="0" cellspacing="5">
 				<TR>
 					<TD align="center">P&#225;ginas: </TD>

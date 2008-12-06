@@ -1,16 +1,72 @@
 {include file=$tpl_adm_topo}
 {*debug*}
+
 <script language="javascript" src="{$tpl_dir}/js/scw.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.form.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.field.js"></script>
+
+<script>
+
+var campos = new Array();
+var inc_ano = 0;
+var ultimo_codigo="{$ultimo_codigo}";
+var modo="{$modo}";
+
+{literal}
+
+String.prototype.pad = function(l, s, t){
+	return s || (s = " "), (l -= this.length) > 0 ? (s = new Array(Math.ceil(l / s.length)
+		+ 1).join(s)).substr(0, t = !t ? l : t == 1 ? 0 : Math.ceil(l / 2))
+		+ this + s.substr(0, l - t) : this;
+};
+
+/*
+exemplo do pad
+var s = "Jonas";
+alert(s.pad(20, "[]", 0));
+alert(s.pad(20, "[====]", 1));
+alert(s.pad(20, "~", 2));
+*/
+
+$().ready(function() {
+	$("select[@name=plano_id]").change(function(){
+		mudaPlano($(this).val());
+	})
+	
+	$('#formulario').submit(
+		function() {
+			return validate();
+		}
+	);
+	
+});
+
+function mudaPlano(plano)
+{
+	$.post('contratos.php', 
+		{ 
+		modo : "obtemValorPadrao",
+		planoID : plano }, 
+		function(resposta){
+			$("#valor_padrao").val(resposta);
+		}
+	);
+	
+}
+
+{/literal}
+</script>
 
 <table border="0" cellpadding="2" cellspacing="0" id="formulario">
-	<form name="frm" action="{$SCRIPT_NAME}" method="post" enctype="multipart/form-data">
+	<form name="formulario" action="{$SCRIPT_NAME}" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="processa" value="ok" />
 	<input type="hidden" name="modo" value="{$modo}" />
 	<input type="hidden" name="id" value="{$campos.id[4]}" />
     <input type="hidden" name="gru" value="{$gru}" />
 	
 	<tr>
-		<td class="rotulos">Código :</td>
+		<td class="rotulos">Cï¿½digo :</td>
 		<td><input type="text" class="text_normal" name="codigo" value="{$campos.codigo[4]}" style="width:450px;" /></td>
 	</tr>
 	
@@ -23,7 +79,7 @@
 				<option value="{$provedor.id}">{if $provedor.codigo != ""}{$provedor.codigo} - {/if}{$provedor.razaosocial}</option>
 {/foreach}
 			</select>
-			<script>document.frm.provedor_id.value="{$campos.provedor_id[4]}";</script>
+			<script>document.formulario.provedor_id.value="{$campos.provedor_id[4]}";</script>
 		</td>
 	</tr>
 	
@@ -36,7 +92,7 @@
 				<option value="{$plano.id}">{if $plano.codigo != ""}{$plano.codigo} - {/if}{$plano.nome}</option>
 {/foreach}
 			</select>
-			<script>document.frm.plano_id.value="{$campos.plano_id[4]}";</script>
+			<script>document.formulario.plano_id.value="{$campos.plano_id[4]}";</script>
 		</td>
 	</tr>
 	
@@ -55,7 +111,7 @@
 {assign var="grupo_id_anterior" value=$cliente.grupo_id}
 {/foreach}
 			</select>
-			<script>document.frm.cliente_id.value="{$campos.cliente_id[4]}";</script>
+			<script>document.formulario.cliente_id.value="{$campos.cliente_id[4]}";</script>
 		</td>
 	</tr>
 	
@@ -68,12 +124,12 @@
 				<option value="{$grupo.id}">{if $grupo.codigo != ""}{$grupo.codigo} - {/if}{$grupo.nome}</option>
 {/foreach}
 			</select>
-			<script>document.frm.grupo_id.value="{$campos.grupo_id[4]}";</script>
+			<script>document.formulario.grupo_id.value="{$campos.grupo_id[4]}";</script>
 		</td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos" valign="top">Descrição :</td>
+		<td class="rotulos" valign="top">Descriï¿½ï¿½o :</td>
 		<td><textarea class="text_normal" name="descricao" style="width:450px; height:100px;" />{$campos.descricao[4]}</textarea></td>
 	</tr>
 	
@@ -83,21 +139,21 @@
 			<input type="checkbox" name="ativo" id="ativo" value="1" class="" style="" />
 			<label for="ativo" class="rotulos">Contrato ativo</label>
 		</td>
-		<script>if("{$campos.ativo[4]}"=="1") document.frm.ativo.checked=true;</script>
+		<script>if("{$campos.ativo[4]}"=="1") document.formulario.ativo.checked=true;</script>
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Data Início :</td>
-		<td><input type="text" class="text_normal" name="data_inicio" value="{$campos.data_inicio[4]|date_format:"%d/%m/%Y"}" style="width:80px;" onClick="scwShow(this,event);" /></td>
+		<td class="rotulos">Data Inï¿½cio :</td>
+		<td><input type="text" class="text_normal" name="data_inicio" value="{$campos.data_inicio[4]}" style="width:80px;" onClick="scwShow(this,event);" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Data Término :</td>
-		<td><input type="text" class="text_normal" name="data_termino" value="{if $campos.data_termino[4]!="00/00/0000"}{$campos.data_termino[4]|date_format:"%d/%m/%Y"}{/if}" style="width:80px;" onClick="scwShow(this,event);" /></td>
+		<td class="rotulos">Data Tï¿½rmino :</td>
+		<td><input type="text" class="text_normal" name="data_termino" value="{$campos.data_termino[4]}" style="width:80px;" onClick="scwShow(this,event);" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos"><label class="rotulos" for="periodo_id">Período Padrão :</label></td>
+		<td class="rotulos"><label class="rotulos" for="periodo_id">Perï¿½odo Padrï¿½o :</label></td>
 		<td>
 			<select name="periodo_id" style="width:454px;">
 				<option value=""></option>
@@ -105,12 +161,12 @@
 				<option value="{$periodo.id}">{$periodo.nome}</option>
 {/foreach}
 			</select>
-			<script>document.frm.periodo_id.value="{$campos.periodo_id[4]}";</script>
+			<script>document.formulario.periodo_id.value="{$campos.periodo_id[4]}";</script>
 		</td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Vencimento padrão :</td>
+		<td class="rotulos">Vencimento padrï¿½o :</td>
 		<td>
 			<select name="vencimento_padrao" id="vencimento_padrao" class="text_normal" style="width:60px;">
 			<option value=""></option>
@@ -118,17 +174,17 @@
 			<option value="{$smarty.section.vencimento_padrao.index}">{$smarty.section.vencimento_padrao.index}</option>
 			{/section}
 			</select>
-			<script>document.frm.vencimento_padrao.value="{$campos.vencimento_padrao[4]}";</script>
+			<script>document.formulario.vencimento_padrao.value="{$campos.vencimento_padrao[4]}";</script>
 		</td>
 	</tr>
     
     <tr>
-		<td class="rotulos">Valor Padrão: <small>R$</small></td>
-		<td><input type="text" class="text_normal" name="valor_padrao" value="{$campos.valor_padrao[4]}" style="width:80px;" /></td>
+		<td class="rotulos">Valor Padrï¿½o: <small>R$</small></td>
+		<td><input type="text" class="text_normal" name="valor_padrao" id="valor_padrao" value="{$campos.valor_padrao[4]}" style="width:80px;" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos" valign="top">Observações :</td>
+		<td class="rotulos" valign="top">Observaï¿½ï¿½es :</td>
 		<td><textarea class="text_normal" name="observacoes" style="width:450px; height:100px;" />{$campos.observacoes[4]}</textarea></td>
 	</tr>
 

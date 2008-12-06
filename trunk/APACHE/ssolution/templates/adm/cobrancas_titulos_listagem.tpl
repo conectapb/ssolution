@@ -1,6 +1,6 @@
 {include file=$tpl_adm_topo}
 {debug}
-<script language="javascript" src="{$tpl_dir}/js/jquery-1.2.2.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.tablesorter.pack.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.quicksearch.js"></script>
 
@@ -105,13 +105,13 @@ function chgVal($id,$op)
 <thead>
 <tr>
 	
-	<th align="center">Nome&nbsp;/&nbsp;Razão Social</th>
+	<th align="center">Nome&nbsp;/&nbsp;Razï¿½o Social</th>
 	<th align="center">Plano</th>
-	<th align="center" width="80">Ref. - Mês</th>
+	<th align="center" width="80">Ref. - Mï¿½s</th>
 	<th align="center" width="80">Ref. - Ano</th>
 	<th align="center">Valor</th>
 	<th align="center">Vencimento</th>
-	<th align="center" width="80">Código</th>
+	<th align="center" width="80">Cï¿½digo</th>
 	<th align="center">Status</th>
 	<th align="center">A&ccedil;&otilde;es</th>
 </tr>

@@ -1,7 +1,70 @@
 {include file=$tpl_adm_topo}
 {*debug*}
-{literal}
+
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.tablesorter.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.quicksearch.js"></script>
+
 <script>
+gru="{$gru}";
+script_name="{$SCRIPT_NAME}";
+{literal}
+$(document).ready(function() {
+	$("#tablesorter").tablesorter({
+		headers: { 3: { sorter: false } },
+		cancelSelection: true,
+		widgets: ['zebra']
+	});
+	$('table#tablesorter tbody tr').quicksearch({
+		position: 'after',
+		attached: '#searchBox',
+		labelText: 'Procurar por: '
+	});
+	
+		$("#visualizarBox_fechar").click(function(){$("#visualizarBox").toogle();});
+	
+	$("#gru").change(function(){
+		document.location = script_name + '?modo=lst&gru=' + $(this).val();
+	});
+	
+	$("#gru").val(gru);
+});
+
+function visualizar($id,$posY)
+{
+	if($id == parseInt($id))
+	{
+		$.post('provedores.php', 
+			{ 
+			modo : "vis",
+			id : $id }, 
+			function(resposta){
+				$("#visualizarBox").hide();
+				$("#visualizarBox").html(resposta);
+				$("#visualizarBox").css("top", self.pageYOffset+10);
+				$("#visualizarBox").show("slow");
+			}
+		);
+	}
+	else
+	{
+		alert("visualizar: id NaN!")
+	}
+}
+
+function findPosY(obj) {
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+		do {
+			curleft += obj.offsetLeft;
+			curtop += obj.offsetTop;
+		} while (obj = obj.offsetParent);
+		//return [curleft,curtop];
+		return curtop;
+	}
+}
+
+
 function chgVal($id,$op)
 {
 	$formulario = document.frm;
@@ -9,7 +72,7 @@ function chgVal($id,$op)
 	{
 		$formulario.modo.value="exc";
 		$formulario.id.value=$id;
-		if(confirm("Confirma Exclusão?"))
+		if(confirm("Confirma Exclusï¿½o?"))
 			$formulario.submit();
 	}
 	else
@@ -19,60 +82,40 @@ function chgVal($id,$op)
 		$formulario.submit();
 	}
 }
-function ressetForm(id_form)
-{
-	form = document.getElementById(id_form);
-	for($i=0;$i<form.length-1;$i++)
-	{
-		if (form[$i].type=="text" || form[$i].type=="select-one")
-		{
-			form[$i].value="";
-		}
-		else
-		{
-			form[$i].checked=false;
-		}
-	}
-}
-function mostracampos(campo)
-{
-	cmp = document.getElementById(campo + "_div");
-	cmp.style.display = "block";
-	cmp2 = document.getElementById("abre_busca");
-	cmp2.innerHTML = "<a href=\"javascript:escondecampos('busca');\"><font size=\"-1\"><strong>[ Contrair Busca ]</strong></font></a>";
-}
-
-function escondecampos(campo)
-{
-	cmp = document.getElementById(campo + "_div");
-	cmp.style.display = "none";
-	cmp2 = document.getElementById("abre_busca");
-	cmp2.innerHTML = "<a href=\"javascript:mostracampos('busca');\"><font size=\"-1\"><strong>[ Expandir Busca ]</strong></font></a>";
-}
 
 </script>
 {/literal}
 
-<table border="0" cellpadding="0" cellspacing="1">
+<div id="visualizarBox" style="position:absolute; top:10px; left:10px; border:1px solid black; background:#FFFFFF"></div>
+
+<div id="searchBox" style="float:right"></div>
+
+<table border="0" cellpadding="0" cellspacing="1" id="tablesorter">
 	<form name="frm" method="post" action="{$SCRIPT_NAME}">
 	<input type="hidden" name="modo" value="" />
 	<input type="hidden" name="id" value="" />
-	<tr>
-		<td class="td_header" width="80" align="center">Codigo</td>
-		<td class="td_header" width="300" align="center">Raz&atilde;o Social</td>
-		<td class="td_header" width="300" align="center">Respons&aacute;vel</td>
-		<td class="td_header" width="150" align="center">Tel. Principal</td>
-		<td>&nbsp;</td>
+	<thead>
+    <tr>
+		<!--<th width="80" align="center">Cï¿½digo</th>-->
+		<th width="300" align="center">Raz&atilde;o Social</th>
+		<th width="300" align="center">Respons&aacute;vel</th>
+		<th width="100" align="center">Tel. Principal</th>
+		<th width="65" align="center">Aï¿½ï¿½es</td>
 	</tr>
+    </thead>
+    <tbody>
 	{section name=i loop=$dados}
 	<tr bgcolor="{cycle values="#FFFFFF,#FAFAFA"}">
-		<td class="td_content">{if $dados[i].codigo != ""}{$dados[i].codigo}{else}-{/if}</td>
+		<!--<td class="td_content">{if $dados[i].codigo != ""}{$dados[i].codigo}{else}-{/if}</td>-->
 		<td class="td_content">{$dados[i].razaosocial}</td>
 		<td class="td_content">{$dados[i].responsavel}</td>
 		<td class="td_content" align="center">{if $dados[i].tel_principal != ""}{$dados[i].tel_principal}{else}-{/if}</td>
 		<td nowrap>
-			<img src="{$tpl_dir}/images/edit.png" alt="Alterar" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'alt');" />
-			<img src="{$tpl_dir}/images/exclude.png" alt="Excluir" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'exc');" />
+        	&nbsp;
+			<img src="{$tpl_dir}/images/edit.png" alt="Alterar" border="0" width="16" height="16" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'alt');" />
+			<img src="{$tpl_dir}/images/exclude.png" alt="Excluir" border="0" width="16" height="16" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'exc');" />
+            <img src="{$tpl_dir}/images/lupa.png" alt="Alterar" border="0" width="16" height="16" hspace="0" vspace="2" onmouseover="this.style.cursor='pointer';" onclick="visualizar({$dados[i].id},findPosY(this));" />
+            &nbsp;
 		</td>
 	</tr>
 	{sectionelse}
@@ -101,6 +144,7 @@ function escondecampos(campo)
 		</TD>
 	</tr>
 	{/if}
+    <tbody>
 	</form>
 </table>
 

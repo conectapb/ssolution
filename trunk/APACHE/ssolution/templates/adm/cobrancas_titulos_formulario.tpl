@@ -2,7 +2,7 @@
 {debug}
 
 <script language="javascript" src="{$tpl_dir}/js/scw.js"></script>
-<script language="javascript" src="{$tpl_dir}/js/jquery-1.2.2.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.form.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.field.js"></script>
 
@@ -214,7 +214,7 @@ function showResponse(responseText, statusText)
 {
 	$("#mensagem").hide();
 	$("#erro").hide();
-	// nao se engane!!! aqui eu só consegui enviar o form pro servidor!!!
+	// nao se engane!!! aqui eu sï¿½ consegui enviar o form pro servidor!!!
 	if(statusText=="success")
 	{
 		$("#vencimento_padrao").html("");
@@ -261,38 +261,38 @@ function validate()
     }
 	
 	if (!$("#referencia_mes").val()) { 
-        validate_erro("Selecione o mês de referência","referencia");
+        validate_erro("Selecione o mï¿½s de referï¿½ncia","referencia");
 		status = false;
     }
 	
 	if (!$("#referencia_ano").val()) { 
-        validate_erro("Selecione o ano de referência","referencia");
+        validate_erro("Selecione o ano de referï¿½ncia","referencia");
 		status = false;
     }
 
 	if (!$("#periodo_inicio_dia").val()) { 
-        validate_erro("Preencha Período Início - Dia","periodo_inicio");
+        validate_erro("Preencha Perï¿½odo Inï¿½cio - Dia","periodo_inicio");
 		status = false;
     }
 	if (!$("#periodo_inicio_mes").val()) { 
-        validate_erro("Preencha Período Início - Mês","periodo_inicio");
+        validate_erro("Preencha Perï¿½odo Inï¿½cio - Mï¿½s","periodo_inicio");
 		status = false;
     }
 	
 	if (!$("#periodo_inicio_ano").val()) { 
-        validate_erro("Preencha Período Início - Ano","periodo_inicio");
+        validate_erro("Preencha Perï¿½odo Inï¿½cio - Ano","periodo_inicio");
 		status = false;
     }
 	if (!$("#periodo_fim_dia").val()) { 
-        validate_erro("Preencha Período Fim - Dia","periodo_fim");
+        validate_erro("Preencha Perï¿½odo Fim - Dia","periodo_fim");
 		status = false; 
     }
 	if (!$("#periodo_fim_mes").val()) { 
-        validate_erro("Preencha Período Fim - Mês","periodo_fim");
+        validate_erro("Preencha Perï¿½odo Fim - Mï¿½s","periodo_fim");
 		status = false;
     }
 	if (!$("#periodo_fim_ano").val()) { 
-        validate_erro("Preencha Período Fim - Ano","periodo_fim");
+        validate_erro("Preencha Perï¿½odo Fim - Ano","periodo_fim");
 		status = false; 
     }
 
@@ -373,7 +373,7 @@ function ajustarCamposOcultos()
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Referência:</td>
+		<td class="rotulos">Referï¿½ncia:</td>
 		<td>
 			<select name="referencia_mes" id="referencia_mes" class="text_normal" style="width:120px;">
 				<option value=""></option>
@@ -424,7 +424,7 @@ function ajustarCamposOcultos()
 	
 	<tr>
 		<td class="rotulos">C&oacute;digo :</td>
-		<td><input type="text" class="text_normal" name="codigo" id="codigo" value="{$campos.codigo[4]}" style="width:120px;" />&nbsp;<input type="button" value="Próx. Código Livre" id="ultcod" /></td>
+		<td><input type="text" class="text_normal" name="codigo" id="codigo" value="{$campos.codigo[4]}" style="width:120px;" />&nbsp;<input type="button" value="Prï¿½x. Cï¿½digo Livre" id="ultcod" /></td>
 	</tr>
 	
 	<tr>

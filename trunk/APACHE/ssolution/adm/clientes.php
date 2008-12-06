@@ -51,8 +51,9 @@ if ($processa=="ok")
 	}
 	
 	$campos = array(
-		"codigo" => array("codigo","Código","varchar","não-requerido",$_REQUEST['codigo']),
-		"tipo" => array("tipo","Tipo","selecao","requerido",$_REQUEST['tipo']),
+		"status_id" => array("codigo","Status","varchar","requerido",$_REQUEST['status_id']),
+        "tipo" => array("tipo","Tipo","selecao","requerido",$_REQUEST['tipo']),
+        "codigo" => array("codigo","Código","varchar","não-requerido",$_REQUEST['codigo']),
 		"nome" => array("nome","Nome","varchar",$obrigatorio_pf,$_REQUEST['nome']),
 		"nascimento" => array("nascimento","Nascimento","data",$importante_pf,data_server($_REQUEST['nascimento'])),
 		"rg" => array("rg","RG","varchar",$importante_pf,$_REQUEST['rg']),
@@ -82,6 +83,9 @@ if ($processa=="ok")
 		"email1" => array("email1","E-mail 1","varchar","nao-requerido",$_REQUEST['email1']),
 		"email2" => array("email2","E-mail 2","varchar","nao-requerido",$_REQUEST['email2']),
 		"email3" => array("email3","E-mail 3","varchar","nao-requerido",$_REQUEST['email3']),
+		"msn_messenger" => array("msn_messenger","MSN Messenger","varchar","nao-requerido",$_REQUEST['msn_messenger']),
+		"yahoo_messenger" => array("yahoo_messenger","Yahoo Messenger","varchar","nao-requerido",$_REQUEST['yahoo_messenger']),
+		"skype" => array("skype","Skype","varchar","nao-requerido",$_REQUEST['skype']),
 		"observacoes" => array("observacoes","Observações","varchar","não-requerido",$_REQUEST['observacoes'])
 		// "" => array("","","varchar","requerido",$_REQUEST['']),
 	);
@@ -210,7 +214,8 @@ else if ($modo=="alt" || $modo=="vis")
 	}
 	$campos = array(
 		"id" => array("id","id","int","requerido",$valores['id']),
-		"tipo" => array("tipo","Tipo","selecao","requerido",$valores['tipo']),
+		"status_id" => array("codigo","Status","varchar","requerido",$valores['status_id']),
+        "tipo" => array("tipo","Tipo","selecao","requerido",$valores['tipo']),
 		"codigo" => array("codigo","Código","varchar","não-requerido",pad($valores['codigo'],5)),
 		"nome" => array("nome","Nome","varchar",$obrigatorio_pf,$valores['nome']),
 		"nascimento" => array("nascimento","Nascimento","data",$importante_pf,$valores['nascimento']),
@@ -241,6 +246,9 @@ else if ($modo=="alt" || $modo=="vis")
 		"email1" => array("email1","E-mail 1","varchar","nao-requerido",$valores['email1']),
 		"email2" => array("email2","E-mail 2","varchar","nao-requerido",$valores['email2']),
 		"email3" => array("email3","E-mail 3","varchar","nao-requerido",$valores['email3']),
+		"msn_messenger" => array("msn_messenger","MSN Messenger","varchar","nao-requerido",$valores['msn_messenger']),
+		"yahoo_messenger" => array("yahoo_messenger","Yahoo Messenger","varchar","nao-requerido",$valores['yahoo_messenger']),
+		"skype" => array("skype","Skype","varchar","nao-requerido",$valores['skype']),
 		"observacoes" => array("observacoes","Observações","varchar","não-requerido",$valores['observacoes']),
 		"datacadastro" => array("datacadastro","Data Cadastro","data","não-requerido",$valores['datacadastro'])
 	);
@@ -337,5 +345,12 @@ else if($modo=="obtemUmGrupo")
 		$tmp['uf'] . "#" .
 		$tmp['ultimo_codigo']
 	);
+}
+else if($modo=="obtemStatus")
+{
+	echo "<option value=\"\"></option>";
+	$res = bdSelect("*","clientes_status","","",$conexao);
+	while($tmp = mysql_fetch_array($res))
+		echo utf8_encode("<option value=\"" . $tmp['id'] . "\">" . $tmp['nome'] . "</option>\n");
 }
 ?>

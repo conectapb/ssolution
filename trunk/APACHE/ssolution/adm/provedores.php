@@ -22,18 +22,18 @@ if ($processa=="ok")
 			"codigo" => array("codigo","Código","varchar","não-requerido",$_REQUEST['codigo']),
 			"razaosocial" => array("razaosocial","Razão Social","varchar","requerido",$_REQUEST['razaosocial']),
 			"nomefantasia" => array("nomefantasia","Nome Fantasia","varchar","requerido",$_REQUEST['nomefantasia']),
-			"cnpj" => array("cnpj","CNPJ","varchar","requerido",$_REQUEST['cnpj']),
-			"inscestadual" => array("inscestadual","Inscrição Estadual","varchar","requerido",$_REQUEST['inscestadual']),
-			"inscmunicipal" => array("inscmunicipal","Inscrição Municipal","varchar","requerido",$_REQUEST['inscmunicipal']),
-			"responsavel" => array("responsavel","Responsável","varchar","requerido",$_REQUEST['responsavel']),
-			"endereco" => array("endereco","Endereço","varchar","requerido",$_REQUEST['endereco']),
-			"numero" => array("numero","Número","varchar","requerido",$_REQUEST['numero']),
+			"cnpj" => array("cnpj","CNPJ","varchar","não-requerido",$_REQUEST['cnpj']),
+			"inscestadual" => array("inscestadual","Inscrição Estadual","varchar","não-requerido",$_REQUEST['inscestadual']),
+			"inscmunicipal" => array("inscmunicipal","Inscrição Municipal","varchar","não-requerido",$_REQUEST['inscmunicipal']),
+			"responsavel" => array("responsavel","Responsável","varchar","não-requerido",$_REQUEST['responsavel']),
+			"endereco" => array("endereco","Endereço","varchar","não-requerido",$_REQUEST['endereco']),
+			"numero" => array("numero","Número","varchar","não-requerido",$_REQUEST['numero']),
 			"complemento" => array("complemento","Complemento","varchar","não-requerido",$_REQUEST['complemento']),
-			"bairro" => array("bairro","Bairro","varchar","requerido",$_REQUEST['bairro']),
-			"cep" => array("cep","CEP","varchar","requerido",$_REQUEST['cep']),
-			"cidade" => array("cidade","Cidade","varchar","requerido",$_REQUEST['cidade']),
-			"uf" => array("uf","UF","varchar","requerido",$_REQUEST['uf']),
-			"tel_principal" => array("tel_principal","Telefone Principal","varchar","requerido",$_REQUEST['tel_principal']),
+			"bairro" => array("bairro","Bairro","varchar","não-requerido",$_REQUEST['bairro']),
+			"cep" => array("cep","CEP","varchar","não-requerido",$_REQUEST['cep']),
+			"cidade" => array("cidade","Cidade","varchar","não-requerido",$_REQUEST['cidade']),
+			"uf" => array("uf","UF","varchar","não-requerido",$_REQUEST['uf']),
+			"tel_principal" => array("tel_principal","Telefone Principal","varchar","não-requerido",$_REQUEST['tel_principal']),
 			"tel_comercial" => array("tel_comercial","Telefone Comercial","varchar","não-requerido",$_REQUEST['tel_comercial']),
 			"tel_financeiro" => array("tel_financeiro","Telefone Financeiro","varchar","não-requerido",$_REQUEST['tel_financeiro']),
 			"tel_suporte" => array("tel_suporte","Telefone Suporte","varchar","não-requerido",$_REQUEST['tel_suporte']),
@@ -41,7 +41,7 @@ if ($processa=="ok")
 			"celular2" => array("celular2","Celular 2","varchar","não-requerido",$_REQUEST['celular2']),
 			"celular3" => array("celular3","Celular 3","varchar","não-requerido",$_REQUEST['celular3']),
 			"fax" => array("fax","FAX","varchar","não-requerido",$_REQUEST['fax']),
-			"email_principal" => array("email_principal","E-mail Principal","email","requerido",$_REQUEST['email_principal']),
+			"email_principal" => array("email_principal","E-mail Principal","email","não-requerido",$_REQUEST['email_principal']),
 			"email_comercial" => array("email_comercial","E-mail Comercial","email","não-requerido",$_REQUEST['email_comercial']),
 			"email_financeiro" => array("email_financeiro","E-mail Financeiro","email","não-requerido",$_REQUEST['email_financeiro']),
 			"email_suporte" => array("email_suporte","E-mail Suporte","email","não-requerido",$_REQUEST['email_suporte']),
@@ -120,12 +120,8 @@ if ($modo=="cad")
 	$visual->assign('modo',$modo);
 	$visual->display('adm/provedores_formulario.tpl');
 }
-else if ($modo=="alt")
+else if ($modo=="alt" || $modo=="vis")
 {
-	$visual->assign('subtitulo','Altera&ccedil;&atilde;o de Provedor');
-	$visual->assign('botao','Alterar');
-	$visual->assign('modo','alt');
-
 	if (!is_numeric($id))
 		die("ID faltando para alteração");
 	
@@ -146,33 +142,44 @@ else if ($modo=="alt")
 		"codigo" => array("codigo","Código","varchar","não-requerido",$valores['codigo']),
 		"razaosocial" => array("razaosocial","Razão Social","varchar","requerido",$valores['razaosocial']),
 		"nomefantasia" => array("nomefantasia","Nome Fantasia","varchar","requerido",$valores['nomefantasia']),
-		"cnpj" => array("cnpj","CNPJ","varchar","requerido",$valores['cnpj']),
+		"cnpj" => array("cnpj","CNPJ","varchar","não-requerido",$valores['cnpj']),
 		"inscestadual" => array("inscestadual","Inscrição Estadual","varchar","não-requerido",$valores['inscestadual']),
 		"inscmunicipal" => array("inscmunicipal","Inscrição Municipal","varchar","não-requerido",$valores['inscmunicipal']),
-		"responsavel" => array("responsavel","Responsável","varchar","requerido",$valores['responsavel']),
-		"endereco" => array("endereco","Endereço","varchar","requerido",$valores['endereco']),
-		"numero" => array("numero","Número","varchar","requerido",$valores['numero']),
+		"responsavel" => array("responsavel","Responsável","varchar","não-requerido",$valores['responsavel']),
+		"endereco" => array("endereco","Endereço","varchar","não-requerido",$valores['endereco']),
+		"numero" => array("numero","Número","varchar","não-requerido",$valores['numero']),
 		"complemento" => array("complemento","Complemento","varchar","não-requerido",$valores['complemento']),
 		"bairro" => array("bairro","Bairro","varchar","não-requerido",$valores['bairro']),
 		"cep" => array("cep","CEP","varchar","não-requerido",$valores['cep']),
-		"cidade" => array("cidade","Cidade","varchar","requerido",$valores['cidade']),
-		"uf" => array("uf","UF","varchar","requerido",$valores['uf']),
-		"tel_principal" => array("tel_principal","Telefone Principal","varchar","requerido",$valores['tel_principal']),
+		"cidade" => array("cidade","Cidade","varchar","não-requerido",$valores['cidade']),
+		"uf" => array("uf","UF","varchar","não-requerido",$valores['uf']),
+		"tel_principal" => array("tel_principal","Telefone Principal","varchar","não-requerido",$valores['tel_principal']),
 		"tel_comercial" => array("tel_comercial","Telefone Comercial","varchar","não-requerido",$valores['tel_comercial']),
 		"tel_financeiro" => array("tel_financeiro","Telefone Financeiro","varchar","não-requerido",$valores['tel_financeiro']),
 		"tel_suporte" => array("tel_suporte","Telefone Suporte","varchar","não-requerido",$valores['tel_suporte']),
-		"celular1" => array("celular1","Celular 1","varchar","requerido",$valores['celular1']),
+		"celular1" => array("celular1","Celular 1","varchar","não-requerido",$valores['celular1']),
 		"celular2" => array("celular2","Celular 2","varchar","não-requerido",$valores['celular2']),
 		"celular3" => array("celular3","Celular 3","varchar","não-requerido",$valores['celular3']),
 		"fax" => array("fax","FAX","varchar","não-requerido",$valores['fax']),
-		"email_principal" => array("email_principal","E-mail Principal","email","requerido",$valores['email_principal']),
+		"email_principal" => array("email_principal","E-mail Principal","email","não-requerido",$valores['email_principal']),
 		"email_comercial" => array("email_comercial","E-mail Comercial","email","não-requerido",$valores['email_comercial']),
 		"email_financeiro" => array("email_financeiro","E-mail Financeiro","email","não-requerido",$valores['email_financeiro']),
 		"email_suporte" => array("email_suporte","E-mail Suporte","email","não-requerido",$valores['email_suporte']),
 		"observacoes" => array("observacoes","Observações","varchar","não-requerido",$valores['observacoes'])
 	);
 	$visual->assign('campos',$campos);
-	$visual->display('adm/provedores_formulario.tpl');
+	
+	if($modo=="alt")
+	{
+		$visual->assign('subtitulo','Altera&ccedil;&atilde;o de Provedor');
+		$visual->assign('botao','Alterar');
+		$visual->assign('modo','alt');
+		$visual->display('adm/provedores_formulario.tpl');
+	}
+	else
+	{
+		echo utf8_encode($visual->fetch('adm/provedores_visualizar.tpl'));
+	}
 }
 else if ($modo=="exc")
 {

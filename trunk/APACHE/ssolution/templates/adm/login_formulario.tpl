@@ -31,7 +31,7 @@ left: 50%;
 margin-left: -338px;
 top: 50%;
 margin-top: -250px;
-{/literal}background-image:url({$tpl_dir}/images/login_box.jpg);{literal}
+{/literal}background-image:url({$tpl_dir}/images/login_bo.jpg);{literal}
 }
 
 label{
@@ -77,7 +77,6 @@ padding: 2px 6px;
 </style>
 
 <body onLoad="document.frm.login.focus();">
-<a id="tooCool" href="http://www.w3junkies.com/toocool/">Too Cool for Internet Explorer</a>
 <div id="errorbox" align="center">{$msg}</div>
 
 <div id="outter_box">

@@ -1,7 +1,7 @@
 {include file=$tpl_adm_topo}
 {*debug*}
 
-<script language="javascript" src="{$tpl_dir}/js/jquery-1.2.2.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.tablesorter.pack.js"></script>
 
 {literal}

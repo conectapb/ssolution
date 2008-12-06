@@ -201,6 +201,27 @@
 		<td>{$campos.email3[4]}</td>
 	</tr>
 	{/if}
+    
+    {if $campos.msn_messenger[4] != ""}
+	<tr bgcolor="{cycle values='#eeeeee,#d0d0d0'}">
+		<td class="rotulos">MSN Messenger:</td>
+		<td>{$campos.msn_messenger[4]}</td>
+	</tr>
+	{/if}
+    
+    {if $campos.yahoo_messenger[4] != ""}
+	<tr bgcolor="{cycle values='#eeeeee,#d0d0d0'}">
+		<td class="rotulos">Yahoo Messenger:</td>
+		<td>{$campos.yahoo_messenger[4]}</td>
+	</tr>
+	{/if}
+    
+    {if $campos.skype[4] != ""}
+	<tr bgcolor="{cycle values='#eeeeee,#d0d0d0'}">
+		<td class="rotulos">Skype:</td>
+		<td>{$campos.skype[4]}</td>
+	</tr>
+	{/if}
 	
 	{if $campos.observacoes[4] != ""}
 	<tr bgcolor="{cycle values='#eeeeee,#d0d0d0'}">

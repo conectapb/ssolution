@@ -249,7 +249,7 @@ function pad($s, $n)
 // modo gambiarra de fazer a transformacao yyyy-mm-dd => dd/mm/aaaa
 function data($string)
 {
-	if($string!="" && $string!="0000-00-00 00:00:00")
+	if($string!="" && $string!="0000-00-00 00:00:00" && $string!="0000-00-00")
 		return substr($string,8,2) . "/" . substr($string,5,2) . "/" . substr($string,0,4);
 	return "";
 }

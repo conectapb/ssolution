@@ -1,3 +1,4 @@
+
 {include file=$tpl_adm_topo}
 {*debug*}
 {literal}
@@ -22,16 +23,17 @@ function chgVal($id,$op)
 </script>
 {/literal}
 
-<table border="0" cellpadding="0" cellspacing="1">
-
+<table border="0" cellpadding="0" cellspacing="1" id="tablesorter">
+<thead>
 <tr>
-	<td class="td_header" width="80" align="center">Codigo</td>
-	<td class="td_header" width="300" align="center">Nome Padrao</td>
-	<td class="td_header" width="400" align="center">Nome Completo</td>
-	<td class="td_header" width="150" align="center">Tipo</td>
-	<td class="td_header" width="100" align="center">Cadastro</td>
-	<td>&nbsp;</td>
+	<th width="80" align="center">Código</td>
+	<th width="300" align="center">Nome Padrão</td>
+	<th width="400" align="center">Nome Completo</td>
+	<th width="150" align="center">Tipo</td>
+	<th width="100" align="center">Cadastro</td>
+	<th nowrap="nowrap" width="65">Ações</th>
 </tr>
+</thead>
 <form name="frm" method="post" action="{$SCRIPT_NAME}">
 <input type="hidden" name="modo" value="" />
 <input type="hidden" name="id" value="" />
@@ -45,8 +47,10 @@ function chgVal($id,$op)
 		<td class="td_content" align="center">{$dados[i].tipo}</td>
 		<td class="td_content" align="center">{$dados[i].datacadastro|date_format:"%d/%m/%Y"}</td>
 		<td nowrap>
+        	&nbsp;
 			<img src="{$tpl_dir}/images/edit.png" alt="Alterar" border="0" width="16" height="16" hspace="0" vspace="2" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'alt');" />
 			<img src="{$tpl_dir}/images/exclude.png" alt="Excluir" border="0" width="16" height="16" hspace="0" vspace="2" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'exc');"s />
+            &nbsp;
 	  </td>
 	</tr>
 {sectionelse}

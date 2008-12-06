@@ -1,12 +1,14 @@
 {include file=$tpl_adm_topo}
 {*debug*}
 
-<script language="javascript" src="{$tpl_dir}/js/jquery-1.2.2.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.maskedinput-1.1.2.pack.js"></script>
 
 <script>
+status_id = "{$campos.status_id[4]}";
 tipo = "{$campos.tipo[4]}";
 codigo_atual="{$campos.codigo[4]}";
+grupo=grupo_atual="{$campos.grupo_id[4]}";
 modo = "{$modo}";
 {literal}
 $(document).ready(function() {
@@ -14,7 +16,16 @@ $(document).ready(function() {
 	$.post('clientes.php', 
 		{ modo : "obtemGrupos" }, 
 		function(resposta){
-			$('#grupo_id').html(resposta);
+            //alert(resposta);
+			$('#grupo_id').html(resposta).attr("value",grupo);
+		}
+	);
+
+    $.post('clientes.php',
+		{ modo : "obtemStatus" },
+		function(resposta){
+            alert(resposta);
+			$('#status_id').html(resposta).attr("value",status_id);
 		}
 	);
 
@@ -45,6 +56,25 @@ $(document).ready(function() {
 		$(".field_pj").show();
 		$(".field_pf").hide();
 	});
+
+    if(modo=="alt")
+        {
+            $('#atualizaAddress').show().click(
+                function(){
+                    chgAddress($('#grupo_id').val());
+                }
+            );
+        }
+        else
+        {
+             $('#atualizaAddress').hide();
+             $('#grupo_id').change(
+                function(){
+                     chgAddress($('#grupo_id').val());
+                }
+             );
+        }
+
 });
 
 function chgAddress(grupoID) {
@@ -91,22 +121,20 @@ function chgAddress(grupoID) {
 	<input type="hidden" name="modo" value="{$modo}" />
 	<input type="hidden" name="id" value="{$campos.id[4]}" />
 	<input type="hidden" name="gru" value="{$gru}" />
-	
+
+    <tr>
+		<td class="rotulos">Status :</td>
+		<td>
+			<select name="status_id" id="status_id" class="text_normal" onchange="" /></select>
+		</td>
+	</tr>
+
 	<tr>
 		<td class="rotulos">Grupo :</td>
 		<td>
-			<script>var grupo=new Array();</script>
-			<select name="grupo_id" class="text_normal" onchange="chgAddress(this.value);" />
-				<option value=""></option>
-			{foreach from=$grupos item=grupo}
-				<option value="{$grupo.id}">{$grupo.codigo} - {$grupo.nome_padrao} - {$grupo.nome}</option>
-			{/foreach}
-			</select>
-			<script>
-				document.frm.grupo_id.value="{$campos.grupo_id[4]}";
-				grupo_atual="{$campos.grupo_id[4]}";
-			</script>
-			</td>
+			<select name="grupo_id" id="grupo_id" class="text_normal" /></select>
+            <input type="button" name="atualizaAddress" id="atualizaAddress" value="Atualizar endereço">
+		</td>
 	</tr>
 	
 	<tr>
@@ -283,6 +311,21 @@ function chgAddress(grupoID) {
 	<tr>
 		<td class="rotulos">E-mail 3:</td>
 		<td><input type="text" class="text_normal" name="email3" id="email3" value="{$campos.email3[4]}" style="width:450px;" /></td>
+	</tr>
+    
+    <tr>
+		<td class="rotulos">MSN Messenger:</td>
+		<td><input type="text" class="text_normal" name="msn_messenger" id="msn_messenger" value="{$campos.msn_messenger[4]}" style="width:450px;" /></td>
+	</tr>
+    
+    <tr>
+		<td class="rotulos">Yahoo Messenger:</td>
+		<td><input type="text" class="text_normal" name="yahoo_messenger" id="yahoo_messenger" value="{$campos.yahoo_messenger[4]}" style="width:450px;" /></td>
+	</tr>
+    
+    <tr>
+		<td class="rotulos">Skype:</td>
+		<td><input type="text" class="text_normal" name="skype" id="skype" value="{$campos.skype[4]}" style="width:450px;" /></td>
 	</tr>
 	
 	<tr>

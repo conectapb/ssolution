@@ -168,8 +168,8 @@ else if ($modo=="alt")
 		"cliente_id" =>			array("cliente_id","Cliente","selecao","requerido",$valores['cliente_id']),
 		"grupo_id" =>			array("grupo_id","Grupo","selecao","requerido",$valores['grupo_id']),
 		"descricao" =>			array("descricao","Descrição","varchar","não-requerido",$valores['descricao']),
-		"data_inicio" =>		array("data_inicio","Data Início","data","requerido",$valores['data_inicio']),
-		"data_termino" =>		array("data_termino","Data Término","data","não-requerido",$valores['data_termino']),
+		"data_inicio" =>		array("data_inicio","Data Início","data","requerido",data($valores['data_inicio'])),
+		"data_termino" =>		array("data_termino","Data Término","data","não-requerido",data($valores['data_termino'])),
 		"periodo_id" =>			array("periodo_id","Período padrão","selecao","requerido",$valores['periodo_id']),
 		"vencimento_padrao" =>	array("vencimento_padrao","Vencimento Padrao","numero","não-requerido",$valores['vencimento_padrao']),
 		"valor_padrao" =>		array("valor_padrao","Valor Padrao","numero","não-requerido",double($valores['valor_padrao'])),
@@ -267,7 +267,7 @@ else if($modo=="lst")
 	$visual->assign('dados',$dados);
 	$visual->display('adm/contratos_listagem.tpl');
 }
-else if($modo=="obtemPlano")
+else if($modo=="obtemValorPadrao")
 {
 	$planoID=$_REQUEST['planoID'];
 	if(is_numeric($planoID) && $planoID>0)

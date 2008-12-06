@@ -36,7 +36,7 @@ max_select_box_items 	= 100
 max_search_return_items = 200
 
 ;NO Trailing slashes
-smarty_dir 		= "X:/DADOS/sistema/APACHE/ssolution/libs/smarty/libs"
-smarty_template_dir 	= "X:/DADOS/sistema/APACHE/ssolution/templates"
-smarty_compile_dir 	= "X:/DADOS/sistema/APACHE/ssolution/templates_c"
+smarty_dir 		= "Z:/DADOS/sistema/APACHE/ssolution/libs/smarty/libs"
+smarty_template_dir 	= "Z:/DADOS/sistema/APACHE/ssolution/templates"
+smarty_compile_dir 	= "Z:/DADOS/sistema/APACHE/ssolution/templates_c"
 
