@@ -1,0 +1,7 @@
+1213277901	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1213277901	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1213279538	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1213279538	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1213313408	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
+1213313408	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1213314491	INSERT INTO contatos(nome,empresa,tipo,edificio,endereco,numero,complemento,bairro,cep,cidade,uf,telefone1,telefone2,celular1,celular2,email1,email2,observacoes) VALUES('Cintia','','cliente','','','','','','','','PR','32457479','','88581630','','','','')

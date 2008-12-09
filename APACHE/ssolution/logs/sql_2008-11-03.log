@@ -1,0 +1,5 @@
+1225709205	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1225709205	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1225713504	UPDATE clientes SET grupo_id='9',status_id='3',codigo='99007',tipo='1',nome='Rozeli Candeo',nascimento='',rg='',cpf='',sexo='2',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',endereco='',numero='',complemento_tipo='Cj.',bloco='',complemento='',bairro='Campo Comprido',cep='',cidade='',uf='PR',tel_residencial='3285-1338',tel_comercial='3221-3616',fax='',tel_celular1='9615-9714',tel_celular2='',site='',email1='',email2='',email3='',observacoes='Conjunto Residencial Trianon
+prox faculdade positivo' WHERE id=139
+1225713504	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=139 Nome=Rozeli Candeo','')

@@ -1,0 +1,4 @@
+1220450017	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1220450017	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1220491838	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1220491838	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
