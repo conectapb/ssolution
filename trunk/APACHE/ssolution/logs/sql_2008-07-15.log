@@ -1,5 +1,0 @@
-1216122472	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
-1216122472	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
-1216123866	UPDATE grupos SET nome_padrao='Empresas',codigo='00',tipo='2',nome='Clientes Empresarial',endereco='',numero='',bairro='',cep='',cidade='',uf='PR',observacoes='Grupo de clientes empresarial.' WHERE id=10
-1216124562	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
-1216124562	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
