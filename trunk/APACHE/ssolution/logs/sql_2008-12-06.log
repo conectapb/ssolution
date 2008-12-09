@@ -1,0 +1,5 @@
+1228569877	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1228569877	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1228570790	UPDATE clientes SET status_id='2',tipo='1',codigo='99006',nome='Elenara Beatriz Fontana',nascimento='',rg='',cpf='',sexo='2',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='9',endereco='',numero='',complemento_tipo='',bloco='',complemento='',bairro='',cep='',cidade='',uf='PR',tel_residencial='3324-1243',tel_comercial='3223-7758',fax='',tel_celular1='9971-6264',tel_celular2='',site='',email1='elenaraf@gmail.com',email2='elenara.fontana@pucpr.br',email3='',msn_messenger='',yahoo_messenger='',skype='',observacoes='Cirurgiã Dentista
+Financeamento carro com BV Financeira' WHERE id=120
+1228570790	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Alterado Cliente ID=120 Nome=Elenara Beatriz Fontana','')

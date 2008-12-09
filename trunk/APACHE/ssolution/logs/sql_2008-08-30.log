@@ -1,0 +1,2 @@
+1220128296	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1220128296	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')

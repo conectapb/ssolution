@@ -1,0 +1,5 @@
+1225105821	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1225105821	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1225106870	UPDATE grupos SET nome_padrao='Empresas',codigo='00',tipo='99',nome='Clientes Empresarial',endereco='',numero='',bairro='',cep='',cidade='',uf='PR',observacoes='Grupo de clientes empresarial.' WHERE id=10
+1225106876	UPDATE grupos SET nome_padrao='Empresas',codigo='00',tipo='2',nome='Clientes Empresarial',endereco='',numero='',bairro='',cep='',cidade='',uf='PR',observacoes='Grupo de clientes empresarial.' WHERE id=10
+1225109938	INSERT INTO grupos_tipos(nome) VALUES(' teste ')

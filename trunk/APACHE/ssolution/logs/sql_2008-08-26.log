@@ -1,0 +1,14 @@
+1219751942	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=1
+1219751942	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1219754944	UPDATE admins SET ultacesso_ip='10.10.11.1',ultacesso=NOW() WHERE id=1
+1219754944	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1219755072	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('08016','1','IGOR HUCHBERG DIAS','1987-12-26','8284309-7 / PR','060.438.769-57','1','','','','','','3','Rua Alferes Poli','294','Ap.','','701','Centro','80.230-090','Curitiba','PR','','','','4191080163','','','','','','')
+1219755072	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=149 Nome=IGOR HUCHBERG DIAS','')
+1219759141	INSERT INTO admins(nome,login,senha,data) VALUES('NerdCAT','nerdcat',MD5('nerdcat'),NOW())
+1219759146	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Logout','')
+1219759154	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=5
+1219759154	INSERT INTO logs_admin(login,mensagem,query) VALUES('nerdcat','Login','')
+1219759797	INSERT INTO logs_admin(login,mensagem,query) VALUES('nerdcat','Logout','')
+1219759814	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1219759814	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1219794229	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('08017','1','Gabriela da Conceição Cruz Tortora ','1986-12-26','5.223.372-0 / PR','056.807.329-04','2','','','','','','3','smart has been denied access!<br> Rua Alferes Poli','294','Ap.','','1602','Centro','80.230-090','Curitiba','PR','','','','4196411262','4196566132','','gaby_freak@hotmail.com','gati_tortora@hotmail.com','','Graciela Tortora - irmã')

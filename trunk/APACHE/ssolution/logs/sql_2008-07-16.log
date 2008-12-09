@@ -1,0 +1,8 @@
+1216236416	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1216236416	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1216236885	INSERT INTO titulos(cliente_id,contrato_id,referencia_mes,referencia_ano,periodo_inicio,periodo_fim,vencimento,codigo,valor,observacoes) VALUES('8','24','7','2008','2008-07-10','2008-08-09','2008-08-10','243525','45,00','456gfd')
+1216236885	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Cadastro Titulo ID=3 Codigo=243525','')
+1216237003	INSERT INTO titulos(cliente_id,contrato_id,referencia_mes,referencia_ano,periodo_inicio,periodo_fim,vencimento,codigo,valor,observacoes) VALUES('10','8','7','2008','2008-07-10','2008-08-09','2008-08-10','243526','45,00','fsfdsdfwr wf s f wfef ')
+1216237003	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Cadastro Titulo ID=4 Codigo=243526','')
+1216237323	INSERT INTO titulos(cliente_id,contrato_id,referencia_mes,referencia_ano,periodo_inicio,periodo_fim,vencimento,codigo,valor,observacoes) VALUES('13','14','7','2008','2008-07-10','2008-08-09','2008-08-10','243527','45,00','trfrgh rht fgb fgh ')
+1216237323	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Cadastro Titulo ID=5 Codigo=243527','')

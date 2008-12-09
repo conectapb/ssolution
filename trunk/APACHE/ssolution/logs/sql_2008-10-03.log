@@ -1,0 +1,5 @@
+1223044032	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1223044032	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1223044430	INSERT INTO titulos_status(nome) VALUES('Cancelado')
+1223044652	UPDATE admins SET ultacesso_ip='127.0.0.1',ultacesso=NOW() WHERE id=3
+1223044652	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')

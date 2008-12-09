@@ -1,0 +1,7 @@
+1212067657	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=3
+1212067657	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1212098784	UPDATE admins SET ultacesso_ip='10.10.11.12',ultacesso=NOW() WHERE id=1
+1212098784	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1212100870	UPDATE clientes SET codigo='08003',tipo='0',nome='Robson Lara Moreira',nascimento='1911-11-11',rg='11111111',cpf='226.520.818-37',sexo='M',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='3',endereco='Rua Alferes Poli',numero='294',complemento_tipo='Ap.',bloco='',complemento='202',bairro='Centro',cep='80230-090',cidade='Curitiba',uf='PR',tel_residencial='',tel_comercial='',fax='',tel_celular1='',tel_celular2='4188779103',site='',email1='robson_lara@hotmail.com',email2='',email3='',observacoes='' WHERE id=9
+1212100870	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Alterado Cliente ID=9 Nome=Robson Lara Moreira','')
+1212100926	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Logout','')

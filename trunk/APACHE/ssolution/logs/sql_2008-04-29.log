@@ -1,0 +1,3 @@
+1209469682	UPDATE admins SET ultacesso_ip='10.12.7.13',ultacesso=NOW() WHERE id=3
+1209469682	INSERT INTO logs_admin(login,mensagem,query) VALUES('sergio','Login','')
+1209477185	UPDATE contratos SET codigo='',descricao='',provedor_id='5',plano_id='10',cliente_id='37',grupo_id='6',data_inicio='2008-04-06',data_termino='2009-04-06',periodo_id='7',vencimento_padrao='10',valor_padrao='47.50',ativo='1',observacoes='' WHERE id=19

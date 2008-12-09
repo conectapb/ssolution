@@ -1,0 +1,8 @@
+1218742362	UPDATE admins SET ultacesso_ip='10.10.11.11',ultacesso=NOW() WHERE id=1
+1218742362	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Login','')
+1218742532	INSERT INTO clientes(codigo,tipo,nome,nascimento,rg,cpf,sexo,razao_social,nome_fantasia,cnpj,inscr_municipal,inscr_estadual,grupo_id,endereco,numero,complemento_tipo,bloco,complemento,bairro,cep,cidade,uf,tel_residencial,tel_comercial,fax,tel_celular1,tel_celular2,site,email1,email2,email3,observacoes) VALUES('99008','1','jose leonel hartmann cambruzzi','1988-03-19','8607495-8 / PR','070.068.789-00','1','','','','','','9','av visconde guarapuava ','3185','Ap.','ed napoli','1701','centro','','curitiba','PR','41','','','4192326539','','','leonel.cambruzzi@gmail.com','','','')
+1218742532	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Cadastro Cliente ID=145 Nome=jose leonel hartmann cambruzzi','')
+1218743075	UPDATE clientes SET codigo='99008',tipo='1',nome='jose leonel hartmann cambruzzi',nascimento='1988-03-19',rg='8607495-8 / PR',cpf='070.068.789-00',sexo='1',razao_social='',nome_fantasia='',cnpj='',inscr_municipal='',inscr_estadual='',grupo_id='9',endereco='av visconde guarapuava ',numero='3185',complemento_tipo='Ap.',bloco='ed napoli',complemento='1701',bairro='centro',cep='',cidade='curitiba',uf='PR',tel_residencial='41',tel_comercial='',fax='',tel_celular1='4192326539',tel_celular2='',site='',email1='leonel.cambruzzi@gmail.com',email2='',email3='',observacoes='00:1f:3a:09:05:a1 cadastrada teste 14/08 ateh 17/08
+10.90.0.11 >> 75x150
+' WHERE id=145
+1218743075	INSERT INTO logs_admin(login,mensagem,query) VALUES('smart','Alterado Cliente ID=145 Nome=jose leonel hartmann cambruzzi','')
