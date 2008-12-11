@@ -1,6 +1,7 @@
 <?
 // Biblioteca de envio de emails via SMTP
-require("phpmailer/class.phpmailer.php");
+include_once("intranet/libs/phpmailer/class.phpmailer.php");
+include_once("intranet/libs/phpmailer/language/phpmailer.lang-br.php");
 
 # lista de emails que vao receber os dados enviados, separados por virgula
 $emails_internos = "smart@smartsolution.com.br";
@@ -25,11 +26,13 @@ $formato = str_replace("<#data#>",$data,$formato);
 // configuracoes de envio
 $mail = new PHPMailer();
 $mail->IsSMTP();
-$mail->Host     = "mail.smartsolution.com.br";
-$mail->SMTPAuth = true;
 $mail->IsHTML(true);
-$mail->Username = "contato@smartsolution.com.br";
+$mail->SMTPAuth = true;
+$mail->Host     = "mail.smartsolution.com.br";
+$mail->Port     = "26";
+$mail->Username = "contato+smartsolution.com.br";
 $mail->Password = "iguarassu";
+$mail->CharSet  = "utf8";
 $mail->From     = "contato@smartsolution.com.br";
 $mail->FromName = "Smart Solution TI";
 $mail->Subject  =  "Novo contato pelo site www.smartsolution.com.br";
