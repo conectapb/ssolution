@@ -4,6 +4,10 @@
 <script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.maskedinput-1.1.2.pack.js"></script>
 
+{literal}
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAUAecZaIhJ9pt2EiErpgo1BRoevPfaekpj5ExUy4Pkbymj8J2mhRS9iuKesMyF9Iaric0Lc-nHHpjQg" type="text/javascript"></script>
+
+{/literal}
 <script>
 status_id = "{$campos.status_id[4]}";
 tipo = "{$campos.tipo[4]}";
@@ -13,7 +17,7 @@ modo = "{$modo}";
 {literal}
 $(document).ready(function() {
 	//GRUPOS
-	$.post('clientes.php', 
+    $.post('clientes.php', 
 		{ modo : "obtemGrupos" }, 
 		function(resposta){
             //alert(resposta);
@@ -57,6 +61,8 @@ $(document).ready(function() {
 		$(".field_pf").hide();
 	});
 
+    //$("#map_frame").hide();
+
     if(modo=="alt")
         {
             $('#atualizaAddress').show().click(
@@ -64,6 +70,8 @@ $(document).ready(function() {
                     chgAddress($('#grupo_id').val());
                 }
             );
+            load($('#endereco').val() + "," + $('#numero').val() + "," + $('#cidade').val() + "," + $('#uf').val());
+
         }
         else
         {
@@ -110,6 +118,31 @@ function chgAddress(grupoID) {
 		a.uf.value="";
 		a.codigo.value="";
 	}
+}
+
+function load(address) {
+    alert(address);
+    if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        var geocoder = new GClientGeocoder();
+
+        geocoder.getLatLng(
+            address,
+            function(point) {
+                if (!point) {
+                    alert("argh!");
+                }
+                else {
+                    alert("yay!");
+                    $('#map_frame').show();
+                    map.setCenter(point, 15);
+                    var marker = new GMarker(point);
+                    map.addOverlay(marker);
+                    marker.openInfoWindowHtml(address);
+                }
+            }
+        );
+    }
 }
 </script>
 {/literal}
@@ -263,6 +296,11 @@ function chgAddress(grupoID) {
 			</table>
 		</td>
 	</tr>
+
+    <tr id="map_frame">
+        <td>&nbsp;</td>
+        <td><div id="" style="width:455px;height:300px"></div></td>
+    </tr>
 
 	<tr>
 		<td class="rotulos">Tel. Residencial :</td>

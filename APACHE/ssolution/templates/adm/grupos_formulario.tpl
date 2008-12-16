@@ -23,7 +23,7 @@
 		<td>
 			<select name="tipo" style="width:450px;">
 			{foreach from=$tipos item=tipo}
-			<option value="{$tipo.id}">{$tipo.tipo}</option>
+			<option value="{$tipo.id}">{$tipo.nome}</option>
 			{/foreach}
 			</select>
 		</td>

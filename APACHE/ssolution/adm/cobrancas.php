@@ -221,7 +221,7 @@ else if($modo=="lst")
 	);
 	
 	$res = bdQuery("
-		SELECT TIT.*,FORMAT(TIT.valor,3) AS valor_format,(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS nome,PLA.nome AS plano_nome,GRU.nome_padrao AS grupo
+		SELECT TIT.*,FORMAT(TIT.valor,2) AS valor_format,(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS nome,PLA.nome AS plano_nome,GRU.nome_padrao AS grupo
 		FROM titulos TIT
 		INNER JOIN clientes CLI ON TIT.cliente_id = CLI.id
 		INNER JOIN contratos CTR ON TIT.contrato_id = CTR.id
