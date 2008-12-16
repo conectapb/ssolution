@@ -12,6 +12,8 @@ var campos = new Array();
 var inc_ano = 0;
 var ultimo_codigo="{$ultimo_codigo}";
 var modo="{$modo}";
+var cliente_id = "{$campos.cliente_id[4]}";
+var contrato_id = "{$campos.contrato_id[4]}";
 
 {literal}
 
@@ -89,9 +91,9 @@ $().ready(function() {
 	if(modo=="alt")
 	{
 {/literal}
-		$("#cliente_id").setValue("{$campos.cliente_id[4]}");
-		mudaCliente("{$campos.cliente_id[4]}","{$campos.contrato_id[4]}");
-		//$("#contrato_id").val("{$campos.contrato_id[4]}");
+		$("#cliente_id").setValue(cliente_id);
+		mudaCliente(cliente_id,contrato_id);
+		//$("#contrato_id").val(contrato_id);
 {literal}
 	}
 });
@@ -214,7 +216,7 @@ function showResponse(responseText, statusText)
 {
 	$("#mensagem").hide();
 	$("#erro").hide();
-	// nao se engane!!! aqui eu s� consegui enviar o form pro servidor!!!
+	// nao se engane!!! aqui eu soh consegui enviar o form pro servidor!!!
 	if(statusText=="success")
 	{
 		$("#vencimento_padrao").html("");

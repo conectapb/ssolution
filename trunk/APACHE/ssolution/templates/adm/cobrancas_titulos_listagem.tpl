@@ -20,11 +20,6 @@ $(document).ready(function() {
 		labelText: 'Procurar por: '
 	});
 	
-	/*
-	$("#tablesorter tbody tr:even").mouseover( function() {$(this).addClass("over"); } ).mouseout( function() { $(this).removeClass("over"); } );
-	$("#tablesorter tbody tr:odd").mouseover( function() { $(this).removeClass("odd"); $(this).addClass("over"); } ).mouseout( function() { $(this).removeClass("over"); $(this).addClass("odd"); } );
-	*/
-	
 	$("#visualizarBox_fechar").click(function(){$("#visualizarBox").toogle();});
 	
 	$("#gru").change(function(){
@@ -111,9 +106,9 @@ function chgVal($id,$op)
 	<th align="center" width="80">Ref. - Ano</th>
 	<th align="center">Valor</th>
 	<th align="center">Vencimento</th>
-	<th align="center" width="80">Cï¿½digo</th>
+	<th align="center" width="80">Código</th>
 	<th align="center">Status</th>
-	<th align="center">A&ccedil;&otilde;es</th>
+	<th align="center">Ações</th>
 </tr>
 </thead>
 <form name="frm" method="post" action="{$SCRIPT_NAME}">
