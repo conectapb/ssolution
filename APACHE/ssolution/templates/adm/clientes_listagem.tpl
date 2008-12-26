@@ -5,6 +5,7 @@
 <script language="javascript" src="{$tpl_dir}/js/jquery.quicksearch.js"></script>
 
 <script>
+sta="{$sta}";
 gru="{$gru}";
 script_name="{$SCRIPT_NAME}";
 {literal}
@@ -20,17 +21,17 @@ $(document).ready(function() {
 		labelText: 'Procurar por: '
 	});
 	
-	/*
-	$("#tablesorter tbody tr:even").mouseover( function() {$(this).addClass("over"); } ).mouseout( function() { $(this).removeClass("over"); } );
-	$("#tablesorter tbody tr:odd").mouseover( function() { $(this).removeClass("odd"); $(this).addClass("over"); } ).mouseout( function() { $(this).removeClass("over"); $(this).addClass("odd"); } );
-	*/
 	$("#visualizarBox_fechar").click(function(){$("#visualizarBox").toogle();});
 	
 	$("#gru").change(function(){
-		document.location = script_name + '?modo=lst&gru=' + $(this).val();
+		document.location = script_name + '?modo=lst&gru=' + $(this).val() + "&sta=" + $("#sta").val();
 	});
-	
 	$("#gru").val(gru);
+
+    $("#sta").change(function(){
+		document.location = script_name + '?modo=lst&gru=' + $("#gru").val() + "&sta=" + $(this).val();
+	});
+	$("#sta").val(sta);
 });
 
 function visualizar($id,$posY)
@@ -54,7 +55,6 @@ function visualizar($id,$posY)
 		alert("visualizar: id NaN!")
 	}
 }
-
 
 function findPosY(obj) {
 	var curleft = curtop = 0;
@@ -91,7 +91,15 @@ function chgVal($id,$op)
 <div id="visualizarBox" style="position:absolute; top:10px; left:10px; border:1px solid black; background:#FFFFFF"></div>
 
 <div id="searchBox" style="float:right">
-<label for="gru">Filtrar por grupo:&nbsp;</label>
+<label for="gru">Status:&nbsp;</label>
+<select id="sta" name="sta" style="vertical-align:top">
+<option value="">Todos</option>
+{foreach from=$status item=sta}
+	<option value="{$sta.id}">{$sta.nome}</option>
+{/foreach}
+</select>
+
+<label for="gru">Grupo:&nbsp;</label>
 <select id="gru" name="gru" style="vertical-align:top">
 <option value="">Todos</option>
 {foreach from=$grupos item=grupo}
@@ -100,14 +108,14 @@ function chgVal($id,$op)
 </select>
 
 </div>
-<table border="0" cellpadding="0" cellspacing="1" id="tablesorter">
+<table border="0" cellpadding="0" cellspacing="1" id="tablesorter" width="100%">
 <thead>
 <tr>
 	<th width="70" align="center">C&oacute;digo</th>
 	<th width="100" align="center">Grupo</th>
 	<th width="60" align="center">Bloco</th>
 	<th width="70" colspan="2" align="center">Compl.</th>
-	<th align="center">Nome&nbsp;/&nbsp;Razï¿½o Social</th>
+	<th align="center">Nome&nbsp;/&nbsp;Razão Social</th>
 	<th width="65" align="center">A&ccedil;&otilde;es</th>
 </tr>
 </thead>
@@ -118,15 +126,12 @@ function chgVal($id,$op)
 <tbody>
 {section name=i loop=$dados}
 {assign var="grupo_atual" value=$dados[i].grupo}
-{if $dados[i].status_id == 1}{assign var="cor_status" value="#009966"}{/if}
-{if $dados[i].status_id == 2}{assign var="cor_status" value="#FF0000"}{/if}
-{if $dados[i].status_id == 2}{assign var="cor_status" value="#FF9900"}{/if}
 {if $grupo_atual != $grupo_anterior && false}
 	<tr>
 		<td class="td_agrupador" colspan="10">{$dados[i].grupo}</td>
 	</tr>
 {/if}
-	<tr class="doStrip" style="color:{$cor_status};">
+	<tr class="doStrip">
 		<td class="td_content">{if $dados[i].codigo != ""}{$dados[i].codigo}{else}-{/if}</td>
 		<td class="td_content">{$dados[i].grupo}</td>
 		<td class="td_content">{$dados[i].bloco}</td>

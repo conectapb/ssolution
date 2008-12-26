@@ -19,7 +19,7 @@ if ($processa=="ok")
 	# cada item do array campos eh um array com:
 	# nome do campo no db , label do campo , tipo de dados do campo , requerido ou nao , valor obtido
 	$campos = array(
-			"nome" => array("nome","Nome","varchar","requerido",$_REQUEST['nome'])
+        "nome" => array("nome","Nome","varchar","requerido",$_REQUEST['nome'])
 	);
 	
 	$dados_ok	= true;
@@ -132,12 +132,12 @@ else if ($modo=="exc")
 }
 else if($modo=="lst")
 {
-	$whr = "";
-	$res = bdSelect(
-		"id,nome",
-		$tabela,
-		$whr,
-		"nome",
+    $dados = sql2array(
+		"SELECT COUNT(B.id) AS n_clientes,A.*
+		FROM clientes_status A
+		LEFT JOIN clientes B ON B.status_id = A.id
+		GROUP BY A.id
+		ORDER BY A.id",
 		$conexao
 	);
 	
