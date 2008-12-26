@@ -1,7 +1,34 @@
 {include file=$tpl_adm_topo}
+
 {*debug*}
-{literal}
+
+<script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.tablesorter.pack.js"></script>
+<script language="javascript" src="{$tpl_dir}/js/jquery.quicksearch.js"></script>
+
 <script>
+{literal}
+$(document).ready(function() {
+	$("#tablesorter").tablesorter({
+		headers: { 2: { sorter: false } },
+		cancelSelection: true,
+		widgets: ['zebra']
+	});
+	$('table#tablesorter tbody tr').quicksearch({
+		position: 'after',
+		attached: '#searchBox',
+		labelText: 'Procurar por: '
+	});
+
+	$("#visualizarBox_fechar").click(function(){$("#visualizarBox").toogle();});
+
+	$("#gru").change(function(){
+		document.location = script_name + '?modo=lst&gru=' + $(this).val();
+	});
+
+	$("#gru").val(gru);
+});
+
 function chgVal($id,$op)
 {
 	$formulario = document.frm;
@@ -49,24 +76,32 @@ function escondecampos(campo)
 	cmp2 = document.getElementById("abre_busca");
 	cmp2.innerHTML = "<a href=\"javascript:mostracampos('busca');\"><font size=\"-1\"><strong>[ Expandir Busca ]</strong></font></a>";
 }
-
-</script>
 {/literal}
+</script>
 
-<table border="0" cellpadding="0" cellspacing="1">
+<div id="visualizarBox" style="position:absolute; top:10px; left:10px; border:1px solid black; background:#FFFFFF"></div>
+
+<div id="searchBox" style="float:right"></div>
+
+<table width="365" border="0" cellpadding="0" cellspacing="1" id="tablesorter">
 	<form name="frm" method="post" action="{$SCRIPT_NAME}">
 	<input type="hidden" name="modo" value="" />
 	<input type="hidden" name="id" value="" />
+    <thead>
 	<tr>
-		<td class="td_header" width="300" align="center">Nome</td>
-		<td align="center">Ações</td>
+		<th width="300" align="center">Nome</td>
+        <th width="85" align="center">Clientes</td>
+		<th width="65" align="center">Ações</td>
 	</tr>
+    </thead>
+    <tbody>
 	{section name=i loop=$dados}
 	<tr bgcolor="{cycle values="#FFFFFF,#FAFAFA"}">
 		<td class="td_content">{$dados[i].nome}</td>
-		<td nowrap>
-			<img src="{$tpl_dir}/images/edit.png" alt="Alterar" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'alt');" />
-			<img src="{$tpl_dir}/images/exclude.png" alt="Excluir" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'exc');" />
+        <td class="td_content">{$dados[i].n_clientes}</td>
+		<td nowrap align="center">
+			{if $dados[i].id > 3}<img src="{$tpl_dir}/images/edit.png" alt="Alterar" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'alt');" />
+			<img src="{$tpl_dir}/images/exclude.png" alt="Excluir" border="0" width="16" height="16" align="absmiddle" onmouseover="this.style.cursor='pointer';" onclick="chgVal({$dados[i].id},'exc');" />{else}Status fixo{/if}
 		</td>
 	</tr>
 	{sectionelse}
@@ -74,6 +109,7 @@ function escondecampos(campo)
 		<td colspan="5" align="center" class="td_content">Nenhum registro encontrado</td>
 	</tr>
 	{/section}
+    </tbody>
 	{if $paginacao!=""}
 	<tr>
 		<TD colspan="5" align="center">
@@ -86,7 +122,7 @@ function escondecampos(campo)
 					{if $smarty.get.pag==$paginacao[j]}
 						<strong>{$paginacao[j]}</strong>
 					{else}
-						<a href="provedores.php?modo=lst&pag={$paginacao[j]}{$build_geturl}">{$paginacao[j]}</a>
+						<a href="{$SCRIPT_NAME}?modo=lst&pag={$paginacao[j]}{$build_geturl}">{$paginacao[j]}</a>
 					{/if}
 					</TD>
 				{/section}

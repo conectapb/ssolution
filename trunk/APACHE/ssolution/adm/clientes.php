@@ -277,6 +277,12 @@ else if($modo=="lst")
 		$visual->assign('gru',$_REQUEST['gru']);
 	}
 
+    if(is_numeric($_REQUEST['sta']) && $_REQUEST['sta'] > 0)
+	{
+		$whr[] = "CLI.status_id=" . $_REQUEST['sta'];
+		$visual->assign('sta',$_REQUEST['sta']);
+	}
+
 	if(sizeof($whr)>0)
 	{
 		$whr = implode(" AND ", $whr);
@@ -309,6 +315,7 @@ else if($modo=="lst")
 	}
 	
 	$visual->assign('grupos',table2array("grupos",$conexao," ORDER BY nome_padrao"));
+    $visual->assign('status',table2array("clientes_status",$conexao," ORDER BY id"));
 	$visual->assign('subtitulo','Manutenção de Clientes');
 	$visual->assign('dados',$dados);
 	$visual->display('adm/clientes_listagem.tpl');
