@@ -36,7 +36,7 @@
 <div id="template_sel" style="position:absolute; right:10px; top:10px;">
 <form name="tpl" action="{$SCRIPT_NAME}?{$querystring}" id="tpl" method="post">
 <input type="hidden" name="tpl_adm" />
-<select name="tpl_sel" onchange="document.tpl.tpl_adm.value=this.value; document.tpl.submit();">
+<select id ="tpl_sel" name="tpl_sel" onchange="document.tpl.tpl_adm.value=this.value; document.tpl.submit();">
 	<option value="1">Template 1</option>
 	<option value="2">Template 2</option>
     <option value="3">Template 3</option>
