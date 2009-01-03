@@ -99,11 +99,10 @@ function chgVal($id,$op)
 <table border="0" cellpadding="0" cellspacing="1" id="tablesorter">
 <thead>
 <tr>
-	
-	<th align="center">Nome&nbsp;/&nbsp;Razï¿½o Social</th>
+	<th align="center">Nome&nbsp;/&nbsp;Razão Social</th>
 	<th align="center">Plano</th>
-	<th align="center" width="80">Ref. - Mï¿½s</th>
-	<th align="center" width="80">Ref. - Ano</th>
+	<th align="center" width="80">Ref. Mês</th>
+	<th align="center" width="80">Ref. Ano</th>
 	<th align="center">Valor</th>
 	<th align="center">Vencimento</th>
 	<th align="center" width="80">Código</th>

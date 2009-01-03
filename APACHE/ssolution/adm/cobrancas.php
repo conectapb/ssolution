@@ -31,7 +31,13 @@ function pegaListaClientes($conn)
 }
 
 $id	= $_REQUEST['id'];
+
 $modo = $_REQUEST['modo'];
+$visual->assign('modo',$modo);
+
+$etapa = $_REQUEST['etapa'];
+$visual->assign('etapa',$etapa);
+
 $processa = $_REQUEST['processa'];
 
 $msg = $_REQUEST['msg'];
@@ -247,16 +253,58 @@ else if($modo=="lst")
 
 else if($modo=="emissao")
 {
-	$intervalo = 10;
+	/*$intervalo = 10;
 	$grupo = $_REQUEST['grupo'];
 	$data_atual=getdate();
 	
 	$mes = ( (is_numeric($_REQUEST['mes'])) && ($_REQUEST['mes']>=1) && ($_REQUEST['mes']<=12) ) ? $_REQUEST['mes'] : $data_atual['mon'];
-	$ano = ( (is_numeric($_REQUEST['mes'])) && ($_REQUEST['ano']>=1970) ) ? $_REQUEST['ano'] : $data_atual['year'];
-	
-	$periodo_ini = date("Y-m-d", mktime  (0, 0, 0, $mes,1,$ano));
-	$periodo_fim = date("Y-m-d", mktime  (0, 0, 0, $mes+1,0,$ano));
-	
+	$ano = ( (is_numeric($_REQUEST['ano'])) && ($_REQUEST['ano']>=1970) ) ? $_REQUEST['ano'] : $data_atual['year'];*/
+
+    if($etapa=="")
+    {
+        $visual->assign('meses',$meses);
+
+        $res = bdSelect("id,nome_padrao","grupos","","",$conexao);
+        $alternate_count=0;
+        while($tmp = mysql_fetch_assoc($res))
+        {
+            if($alternate_count%2 != 0)
+                $grupos_odd[] = $tmp;
+            else
+            $grupos_even[] = $tmp;
+
+            $alternate_count++;
+        }
+        unset($alternate_count);
+
+        $visual->assign('grupos_even',$grupos_even);
+        $visual->assign('grupos_odd',$grupos_odd);
+
+        $visual->display('adm/cobrancas_titulos_emissao1.tpl');
+    }
+    else if($etapa==1)
+    {
+        $referencia_ano = $_REQUEST['referencia_ano'];
+        $referencia_mes = $_REQUEST['referencia_mes'];
+        $grupos = $_REQUEST['grupo_id'];
+
+        foreach($grupos as $grupo)
+        {
+            $sql = "select count(id) from contratos where contratos.ativo and contratos.grupo_id=" . $grupo;
+            $res=bdQuery($sql,$conexao);
+            echo mysql_result($res, 0) . "<br>";
+            $sql = "
+                select titulos.*,contratos.*,grupos.nome_padrao AS grupo_nome,clientes.nome AS cliente_nome
+                from titulos
+                inner join clientes on titulos.cliente_id=clientes.id
+                inner join contratos on titulos.contrato_id = contratos.id
+                inner join grupos on contratos.grupo_id = grupos.id
+                where grupos.id = " . $grupo ;
+            $res=bdQuery($sql,$conexao);
+            //echo bdNumReg($res);
+            //echo $sql;
+        }
+    }
 	/*
 	// pegue todos os contratos que nao tem boleto emitido no periodo designado
 	$sql = "

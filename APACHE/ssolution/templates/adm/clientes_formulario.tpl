@@ -12,7 +12,6 @@ grupo=grupo_atual="{$campos.grupo_id[4]}";
 modo = "{$modo}";
 {literal}
 $(document).ready(function() {
-	//GRUPOS
 	$.post('clientes.php', 
 		{ modo : "obtemGrupos" }, 
 		function(resposta){
@@ -29,11 +28,9 @@ $(document).ready(function() {
 		}
 	);
 
-	// MASCARAS
 	$("#cpf").mask("999.999.999-99");
 	$("#cnpj").mask("99.999.999/9999-99");
 	$("#nascimento").mask("99/99/9999");
-	
 	
 	$(".field_pj").hide();
 	$(".field_pf").hide();
@@ -78,49 +75,48 @@ $(document).ready(function() {
 });
 
 function chgAddress(grupoID) {
-	a=document.frm;
-	
 	if(grupoID!="")
 	{
 		$.post('clientes.php', 
 			{ modo : "obtemUmGrupo" , grpID: grupoID }, 
 			function(resposta){
 				var tmp = resposta.split("#");
-				a.endereco.value=tmp[0];
-				a.numero.value=tmp[1];
-				a.bairro.value=tmp[2];
-				a.cep.value=tmp[3];
-				a.cidade.value=tmp[4];
-				a.uf.value=tmp[5];
+				$('#endereco').val(tmp[0]);
+				$('#numero').val(tmp[1]);
+				$('#bairro').val(tmp[2]);
+				$('#cep').val(tmp[3]);
+				$('#cidade').val(tmp[4]);
+				$('#uf').val(tmp[5]);
 				if(grupoID!=grupo_atual)
-					a.codigo.value=tmp[6];
+					$('#codigo').val(tmp[6]);
 				else
-					a.codigo.value=codigo_atual;
+					$('#codigo').val(codigo_atual);
 				//$('#grupo_id').html(resposta);
 			}
 		);
 	}
 	else
 	{
-		a.endereco.value="";
-		a.numero.value="";
-		a.bairro.value="";
-		a.cep.value="";
-		a.cidade.value="";
-		a.uf.value="";
-		a.codigo.value="";
+		$('#endereco').val("");
+        $('#numero').val("");
+        $('#bairro').val("");
+        $('#cep').val("");
+        $('#cidade').val("");
+        $('#uf').val("");
+        $('#codigo').val("");
 	}
 }
 </script>
 {/literal}
+
 <br />
 
 <table border="0" cellpadding="2" cellspacing="0" border="0">
 	<form name="frm" action="{$SCRIPT_NAME}" method="post">
-	<input type="hidden" name="processa" value="ok" />
-	<input type="hidden" name="modo" value="{$modo}" />
-	<input type="hidden" name="id" value="{$campos.id[4]}" />
-	<input type="hidden" name="gru" value="{$gru}" />
+	<input type="hidden" name="processa" id="processa" value="ok" />
+	<input type="hidden" name="modo" id="modo" value="{$modo}" />
+	<input type="hidden" name="id" id="id" value="{$campos.id[4]}" />
+	<input type="hidden" name="gru" id="gru" value="{$gru}" />
 
     <tr>
 		<td class="rotulos">Status :</td>
@@ -330,7 +326,9 @@ function chgAddress(grupoID) {
 	
 	<tr>
 		<td class="rotulos" valign="top">Observa&ccedil;&otilde;es :</td>
-		<td><textarea class="text_normal" name="observacoes" id="observacoes" />{$campos.observacoes[4]}</textarea></td>
+		<td>
+                <textarea class="text_normal" name="observacoes" id="observacoes" />{$campos.observacoes[4]}</textarea>
+        </td>
 	</tr>
 
 	<tr>

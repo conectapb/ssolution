@@ -375,7 +375,7 @@ function ajustarCamposOcultos()
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Referï¿½ncia:</td>
+		<td class="rotulos">Referência:</td>
 		<td>
 			<select name="referencia_mes" id="referencia_mes" class="text_normal" style="width:120px;">
 				<option value=""></option>
