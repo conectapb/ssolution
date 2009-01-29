@@ -1,10 +1,10 @@
+{assign var='visualizar_box_XOffset' value='15'}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Smart Solution - {$subtitulo}</title>
 
-<script type="text/javascript" src="{$tpl_dir_adm}drop_down.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script>
     {literal}
@@ -62,7 +62,6 @@
 	</li>
 {/section}
 	<li><a href="sair.php">Sair</a></li>
-    <li><a href="#" onclick="$('#menu').toggle();">Ocultar</a></li>
 </ul>
 {/if}
 </div>

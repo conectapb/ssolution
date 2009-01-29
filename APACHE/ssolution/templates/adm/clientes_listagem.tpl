@@ -43,7 +43,7 @@
                 modo : "vis",
                 id : $id },
                 function(resposta){
-                  $("#visualizarBox").hide();
+                   $("#visualizarBox").hide("slow");
                    $("#visualizarBox").html(resposta);
                    $("#visualizarBox").css("top", self.pageYOffset+10);
                    $("#visualizarBox").show("slow");
@@ -75,7 +75,7 @@
         {
             $formulario.modo.value="exc";
             $formulario.id.value=$id;
-            if(confirm("Confirma Exclusao?"))
+            if(confirm("Confirma Exclusão?"))
                 $formulario.submit();
         }
         else if ($op=="alt")
@@ -91,6 +91,7 @@
 <div id="visualizarBox" style="position:absolute; top:10px; left:10px; border:1px solid black; background:#FFFFFF"></div>
 
 <div id="searchBox" style="float:right">
+
     <label for="gru">Status:&nbsp;</label>
     <select id="sta" name="sta" style="vertical-align:top">
         <option value="">Todos</option>

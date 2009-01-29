@@ -3,6 +3,7 @@
 
 <script language="javascript" src="{$tpl_dir}/js/jquery.js"></script>
 <script language="javascript" src="{$tpl_dir}/js/jquery.maskedinput-1.1.2.pack.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key={$gmaps_key}" type="text/javascript"></script>
 
 <script>
 status_id = "{$campos.status_id[4]}";
@@ -12,10 +13,20 @@ grupo=grupo_atual="{$campos.grupo_id[4]}";
 modo = "{$modo}";
 {literal}
 $(document).ready(function() {
-	$.post('clientes.php', 
+    $('#mapTd').hide();
+    $('#toggleMapDisplay').click(function(){
+
+        if($('#toggleMapDisplay').css('display')=="none")
+            $('#toggleMapDisplay').attr('value','Ocultar');
+        else
+            $('#toggleMapDisplay').attr('value','Visualizar');
+        
+        $('#mapTd').toggle();
+    });
+    
+    $.post('clientes.php', 
 		{ modo : "obtemGrupos" }, 
 		function(resposta){
-            //alert(resposta);
 			$('#grupo_id').html(resposta).attr("value",grupo);
 		}
 	);
@@ -23,7 +34,6 @@ $(document).ready(function() {
     $.post('clientes.php',
 		{ modo : "obtemStatus" },
 		function(resposta){
-            //alert(resposta);
 			$('#status_id').html(resposta).attr("value",status_id);
 		}
 	);
@@ -49,63 +59,107 @@ $(document).ready(function() {
 		$(".field_pf").show();
 		$(".field_pj").hide();
 	});
+
 	$("#tipo_pj").click(function() {
 		$(".field_pj").show();
 		$(".field_pf").hide();
 	});
+    
+    $("#updateMapDisplay").click(function() {
+		mapAddress($('#endereco').val(),$('#numero').val(),$('#cidade').val(),$('#uf').val());
+	});
 
     if(modo=="alt")
+    {
+        $('#atualizaAddress').show().click(
+            function(){
+                chgAddress($('#grupo_id').val());
+            }
+        );
+        mapAddress($('#endereco').val(),$('#numero').val(),$('#cidade').val(),$('#uf').val());
+    }
+    else
+    {
+         $('#atualizaAddress').hide();
+         $('#grupo_id').change(
+            function(){
+                 chgAddress($('#grupo_id').val());
+            }
+         );
+    }
+    
+    var map;
+    var mapControl;
+    load();
+
+
+ });
+
+    function chgAddress(grupoID)
+    {
+        
+        if(grupoID!="")
         {
-            $('#atualizaAddress').show().click(
-                function(){
-                    chgAddress($('#grupo_id').val());
+            //alert(grupoID);
+            $.post('clientes.php',
+                { modo : "obtemUmGrupo" , grpID: grupoID },
+                function(resposta){
+                    var tmp = resposta.split("#");
+                    $('#endereco').val(tmp[0]);
+                    $('#numero').val(tmp[1]);
+                    $('#bairro').val(tmp[2]);
+                    $('#cep').val(tmp[3]);
+                    $('#cidade').val(tmp[4]);
+                    $('#uf').val(tmp[5]);
+                    if(grupoID!=grupo_atual)
+                        $('#codigo').val(tmp[6]);
+                    else
+                        $('#codigo').val(codigo_atual);
+                    
+                    //mapAddress($('#endereco').val(),$('#numero').val(),$('#cidade').val(),$('#uf').val());
                 }
             );
         }
         else
         {
-             $('#atualizaAddress').hide();
-             $('#grupo_id').change(
-                function(){
-                     chgAddress($('#grupo_id').val());
-                }
-             );
+            $('#endereco').val("");
+            $('#numero').val("");
+            $('#bairro').val("");
+            $('#cep').val("");
+            $('#cidade').val("");
+            $('#uf').val("");
+            $('#codigo').val("");
         }
+    }
 
-});
+    function load() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map"));
+        mapControl = new GMapTypeControl();
+        map.addControl(mapControl);
+        map.addControl(new GSmallMapControl());
+      }
+    }
 
-function chgAddress(grupoID) {
-	if(grupoID!="")
-	{
-		$.post('clientes.php', 
-			{ modo : "obtemUmGrupo" , grpID: grupoID }, 
-			function(resposta){
-				var tmp = resposta.split("#");
-				$('#endereco').val(tmp[0]);
-				$('#numero').val(tmp[1]);
-				$('#bairro').val(tmp[2]);
-				$('#cep').val(tmp[3]);
-				$('#cidade').val(tmp[4]);
-				$('#uf').val(tmp[5]);
-				if(grupoID!=grupo_atual)
-					$('#codigo').val(tmp[6]);
-				else
-					$('#codigo').val(codigo_atual);
-				//$('#grupo_id').html(resposta);
-			}
-		);
-	}
-	else
-	{
-		$('#endereco').val("");
-        $('#numero').val("");
-        $('#bairro').val("");
-        $('#cep').val("");
-        $('#cidade').val("");
-        $('#uf').val("");
-        $('#codigo').val("");
-	}
-}
+    function mapAddress(endereco,numero,cidade,uf)
+    {
+        var geocoder = new GClientGeocoder();
+        var address = endereco + "," + numero + "," + cidade + "," + uf;
+        //alert(address);
+        geocoder.getLatLng(
+            address,
+            function(point) {
+                if (!point) {
+                    $('#mapTd').hide();
+                } else {
+                    map.setCenter(point, 15);
+                    var marker = new GMarker(point);
+                    map.addOverlay(marker);
+                    marker.openInfoWindowHtml(address);
+                }
+            }
+        );
+    }
 </script>
 {/literal}
 
@@ -135,7 +189,7 @@ function chgAddress(grupoID) {
 	
 	<tr>
 		<td class="rotulos">C&oacute;digo :</td>
-		<td><input type="text" class="text_normal" name="codigo" value="{$campos.codigo[4]}" /></td>
+		<td><input type="text" class="text_normal" id="codigo" name="codigo" value="{$campos.codigo[4]}" /></td>
 	</tr>
 	
 	<tr>
@@ -255,12 +309,34 @@ function chgAddress(grupoID) {
 						{html_options values=$estados selected=$sel_estado output=$estados}
 						</select>
 					</td>
+                    <td>
+                        <input type="button" id="toggleMapDisplay" name="toggleMapDisplay" value="Visualizar">
+                    </td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 
-	<tr>
+    <tr id="mapTd">
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <div id="map" style="width:456px;height:300px"></div>
+                    </td>
+                    <td valign="top">
+                        <input type="button" id="updateMapDisplay" name="updateMapDisplay" value="Atualiza">
+                    </td>
+                </tr>
+            </table>
+            
+        </td>
+    </tr>
+
+    <tr>
 		<td class="rotulos">Tel. Residencial :</td>
 		<td>
 			<table cellpadding="0" cellspacing="0" border="0">

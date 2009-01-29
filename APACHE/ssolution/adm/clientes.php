@@ -117,7 +117,7 @@ if ($processa=="ok")
 			{
 				logAdm($conexao,$_SESSION['admin_login'],"Cadastro Cliente ID=$cad Nome=" . $campos['nome'][4]);
 				$msg = "Cliente cadastrado com sucesso!";
-				redir($thispage . "?modo=cad&gru=". $gru . "&msg=" . urlencode($msg));
+				redir($thispage . "?modo=cad&msg=" . urlencode($msg));
 			}
 			else
 			{
@@ -147,16 +147,20 @@ if ($processa=="ok")
 			{
 				logAdm($conexao,$_SESSION['admin_login'],"Alterado Cliente ID=" . $id . " Nome=" . $campos['nome'][4]);
 				$msg = "Cliente alterado com sucesso!";
-				
+
+                $visual->assign('msg',$msg);
+                $visual->assign('erros',$erros);
+
+                /*
 				if(sizeof($erros['alerta'])>0)
 				{
-					$visual->assign('msg',$msg);
-					$visual->assign('erros',$erros);
+					
 				}
 				else
 				{
-					redir($thispage . "?modo=lst&gru=". $gru . "&msg=" . urlencode($msg));
+					//redir($thispage . "?modo=lst&msg=" . urlencode($msg));
 				}
+                */
 			}
 		}
 	}
@@ -271,16 +275,26 @@ else if($modo=="lst")
 {
 	unset($whr);
 
-	if(is_numeric($_REQUEST['gru']) && $_REQUEST['gru'] > 0)
+    if(isset($_REQUEST['gru']))
+    {
+        $_SESSION['cliente_gru'] = $_REQUEST['gru'];
+    }
+    $visual->assign('gru',$_SESSION['cliente_gru']);
+    
+    if(isset($_REQUEST['sta']))
+    {
+        $_SESSION['cliente_sta'] = $_REQUEST['sta'];
+    }
+    $visual->assign('sta',$_SESSION['cliente_sta']);
+    
+    if(is_numeric($_SESSION['cliente_gru']) && $_SESSION['cliente_gru'] > 0)
 	{
-		$whr[] = "CLI.grupo_id=" . $_REQUEST['gru'];
-		$visual->assign('gru',$_REQUEST['gru']);
+		$whr[] = "CLI.grupo_id=" . $_SESSION['cliente_gru'];
 	}
 
-    if(is_numeric($_REQUEST['sta']) && $_REQUEST['sta'] > 0)
+    if(is_numeric($_SESSION['cliente_sta']) && $_SESSION['cliente_sta'] > 0)
 	{
-		$whr[] = "CLI.status_id=" . $_REQUEST['sta'];
-		$visual->assign('sta',$_REQUEST['sta']);
+		$whr[] = "CLI.status_id=" . $_SESSION['cliente_sta'];
 	}
 
 	if(sizeof($whr)>0)

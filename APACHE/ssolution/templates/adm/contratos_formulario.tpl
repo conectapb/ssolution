@@ -66,7 +66,7 @@ function mudaPlano(plano)
     <input type="hidden" name="gru" value="{$gru}" />
 	
 	<tr>
-		<td class="rotulos">Cï¿½digo :</td>
+		<td class="rotulos">Código :</td>
 		<td><input type="text" class="text_normal" name="codigo" value="{$campos.codigo[4]}" style="width:450px;" /></td>
 	</tr>
 	
@@ -129,7 +129,7 @@ function mudaPlano(plano)
 	</tr>
 	
 	<tr>
-		<td class="rotulos" valign="top">Descriï¿½ï¿½o :</td>
+		<td class="rotulos" valign="top">Descrição :</td>
 		<td><textarea class="text_normal" name="descricao" style="width:450px; height:100px;" />{$campos.descricao[4]}</textarea></td>
 	</tr>
 	
@@ -143,17 +143,17 @@ function mudaPlano(plano)
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Data Inï¿½cio :</td>
+		<td class="rotulos">Data Início :</td>
 		<td><input type="text" class="text_normal" name="data_inicio" value="{$campos.data_inicio[4]}" style="width:80px;" onClick="scwShow(this,event);" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Data Tï¿½rmino :</td>
+		<td class="rotulos">Data Término :</td>
 		<td><input type="text" class="text_normal" name="data_termino" value="{$campos.data_termino[4]}" style="width:80px;" onClick="scwShow(this,event);" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos"><label class="rotulos" for="periodo_id">Perï¿½odo Padrï¿½o :</label></td>
+		<td class="rotulos"><label class="rotulos" for="periodo_id">Período Padrão :</label></td>
 		<td>
 			<select name="periodo_id" style="width:454px;">
 				<option value=""></option>
@@ -166,7 +166,7 @@ function mudaPlano(plano)
 	</tr>
 	
 	<tr>
-		<td class="rotulos">Vencimento padrï¿½o :</td>
+		<td class="rotulos">Vencimento padrão :</td>
 		<td>
 			<select name="vencimento_padrao" id="vencimento_padrao" class="text_normal" style="width:60px;">
 			<option value=""></option>
@@ -179,12 +179,12 @@ function mudaPlano(plano)
 	</tr>
     
     <tr>
-		<td class="rotulos">Valor Padrï¿½o: <small>R$</small></td>
+		<td class="rotulos">Valor Padrão: <small>R$</small></td>
 		<td><input type="text" class="text_normal" name="valor_padrao" id="valor_padrao" value="{$campos.valor_padrao[4]}" style="width:80px;" /></td>
 	</tr>
 	
 	<tr>
-		<td class="rotulos" valign="top">Observaï¿½ï¿½es :</td>
+		<td class="rotulos" valign="top">Observações :</td>
 		<td><textarea class="text_normal" name="observacoes" style="width:450px; height:100px;" />{$campos.observacoes[4]}</textarea></td>
 	</tr>
 
@@ -192,7 +192,7 @@ function mudaPlano(plano)
 		<td>&nbsp;</td>
 		<td align="center">
 			{if $modo=="alt"}<input type="button" class="botao" value="Voltar" onClick="document.location='{$SCRIPT_NAME}?modo=lst'" />&nbsp;{/if}
-		<input type="submit" class="botao" value="{$botao}" /></td>
+		<input type="submit" class="botao_normal" value="{$botao}" /></td>
 	</tr>
 </table>
 

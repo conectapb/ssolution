@@ -14,6 +14,8 @@ $_SESSION['adm_ultacesso']		= "";
 $_SESSION['adm_ultacesso_ip']	= "";
 $_SESSION['url']	= "";
 $_SESSION['tpl_adm']			= "";
+unset($_SESSION['cliente_gru']);
+unset($_SESSION['cliente_sta']);
 
 redir("login.php?msg=" . urlencode("Sessão encerrada com sucesso"));
 ?>
