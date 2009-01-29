@@ -26,6 +26,7 @@ if ($_SERVER['HTTP_HOST']=="localhost" || $rede_atual == $rede_smart ){
 	$phpgacldir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . '/libs/phpgacl/';
 	$logdir = $_SERVER['DOCUMENT_ROOT'] . "/" . PROJECTNAME . '/logs/';
 	$sqllogfile = $logdir . "sql_%date%.log";
+    $gmaps_key="ABQIAAAAUAecZaIhJ9pt2EiErpgo1BT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRipCXq9_8d6cJa4ZCSxGGsHALbvQ";
 }
 else
 {
@@ -39,6 +40,7 @@ else
 	$phpgacldir = $_SERVER['DOCUMENT_ROOT'] . '/libs/phpgacl/';
 	$logdir = $_SERVER['DOCUMENT_ROOT'] . '/logs/';
 	$sqllogfile = $logdir . "sql_%date%.log";
+    $gmaps_key="ABQIAAAAUAecZaIhJ9pt2EiErpgo1BRoevPfaekpj5ExUy4Pkbymj8J2mhRS9iuKesMyF9Iaric0Lc-nHHpjQg";
 }
 
 // Tentando criar o hábito de usar constantes =)
@@ -86,7 +88,7 @@ $visual->assign('tpl_dir_adm',$visual->template_dir."/adm/");
 if($_REQUEST['tpl_adm']!="")
 	$_SESSION['tpl_adm'] = $_REQUEST['tpl_adm'];
 else if($_SESSION['tpl_adm']=="")
-	$_SESSION['tpl_adm']=2;
+	$_SESSION['tpl_adm']=3;
 
 $visual->assign('tpl_adm',$_SESSION['tpl_adm']);
 $visual->assign('tpl_adm_topo',$visual->template_dir."/adm/topo" . $_SESSION['tpl_adm'] . ".tpl");
@@ -94,6 +96,8 @@ $visual->assign('tpl_adm_rodape',$visual->template_dir."/adm/rodape" . $_SESSION
 $visual->assign('tpl_adm_style',$visual->template_dir."/adm/style" . $_SESSION['tpl_adm'] . ".css");
 
 $visual->assign('querystring',$querystring);
+
+$visual->assign('gmaps_key',$gmaps_key);
 
 // INICIALIZACAO DO phpGACL
 /*require_once($phpgacldir . 'gacl.class.php');

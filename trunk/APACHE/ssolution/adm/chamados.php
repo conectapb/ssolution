@@ -114,7 +114,7 @@ if ($modo=="cad")
 	$visual->assign('clientes',pegaClientes($conexao));
 	$visual->assign('admins',table2array("admins",$conexao));
 	$visual->assign('chamados_status',table2array("chamados_status",$conexao));
-	$visual->assign('tipos',table2array("chamados_tipos",$conexao));
+	$visual->assign('tipos',table2array("chamados_areas",$conexao));
 	$visual->assign('subtitulo','Abertura de Chamado');
 	$visual->assign('botao','Cadastrar');
 	$visual->assign('modo',$modo);
@@ -125,7 +125,7 @@ else if ($modo=="alt")
 	$visual->assign('clientes',pegaClientes($conexao));
 	$visual->assign('admins',table2array("admins",$conexao));
 	$visual->assign('chamados_status',table2array("chamados_status",$conexao));
-	$visual->assign('tipos',table2array("chamados_tipos",$conexao));
+	$visual->assign('tipos',table2array("chamados_areas",$conexao));
 	$visual->assign('subtitulo','Altera&ccedil;&atilde;o de Chamados');
 	$visual->assign('botao','Alterar');
 	$visual->assign('modo','alt');
@@ -178,7 +178,7 @@ else if($modo=="lst")
 		INNER JOIN clientes CLI ON CLI.id = CHA.cliente_id
 		INNER JOIN admins ADM ON ADM.id = CHA.admin_id
 		INNER JOIN chamados_status STA ON STA.id = CHA.status_id
-		INNER JOIN chamados_tipos TIP ON TIP.id = CHA.tipo_id
+		INNER JOIN chamados_areas TIP ON TIP.id = CHA.tipo_id
 		ORDER BY cliente,tipo,status",
 		$conexao
 	);
