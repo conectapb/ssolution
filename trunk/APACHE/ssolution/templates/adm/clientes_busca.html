@@ -1,0 +1,1138 @@
+<fieldset id="fieldset_table_qbe">
+    <legend><em>Ou</em> Busca Avançada (coringa: "%")</legend>
+    <table class="data">
+    <thead>
+    <tr><th>Campo</th>
+        <th>Operador</th>
+        <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <script type="text/javascript" src="./js/tbl_change.js"></script>
+        <tr class="odd">
+            <th>id</th>
+            <td>int(10) </td>
+            <td></td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+
+                        <option value="&gt;">&gt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&lt;=">&lt;=</option>
+                        <option value="!=">!=</option>
+                        <option value="LIKE">LIKE</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[0]" size="40" class="textfield" id="field_0" />
+            <input type="hidden" name="names[0]"
+                value="id" />
+            <input type="hidden" name="types[0]" value="int(10) " />
+
+            <input type="hidden" name="collations[0]" value="" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>codigo</th>
+
+            <td><select name="func[]">
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+
+            <input type="text" name="fields[1]" size="40" class="textfield" id="field_1" />
+            <input type="hidden" name="names[1]" value="codigo" />
+            <input type="hidden" name="types[1]" value="varchar(100)" />
+            <input type="hidden" name="collations[1]" value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>tipo</th>
+
+            <td>enum('Pessoa física', 'Pessoa jurídica')</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <select name="fields[2][]" multiple="multiple" size="2">
+                <option value="Pessoa física">Pessoa física</option>                <option value="Pessoa jurídica">Pessoa jurídica</option>            </select>
+
+            <input type="hidden" name="names[2]" value="tipo" />
+            <input type="hidden" name="types[2]" value="enum('Pessoa física', 'Pessoa jurídica')" />
+            <input type="hidden" name="collations[2]" value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>nome</th>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" name="fields[3]" size="40" class="textfield" id="field_3" />
+            </td>
+        </tr>
+        <tr class="odd">
+
+            <th>nascimento</th>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&gt;=">&gt;=</option>
+
+                        <option value="&lt;">&lt;</option>
+                        <option value="&lt;=">&lt;=</option>
+                        <option value="!=">!=</option>
+                        <option value="LIKE">LIKE</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" name="fields[4]" size="40" class="textfield" id="field_4" />
+            </td>
+        </tr>
+        <tr class="even">
+            <th>rg</th>
+            <td>varchar(20)</td>
+            <td>latin1_swedish_ci</td>
+
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+
+                    <input type="text" name="fields[5]" size="40" class="textfield" id="field_5" />
+            <input type="hidden" name="names[5]"
+                value="rg" />
+            <input type="hidden" name="types[5]"
+                value="varchar(20)" />
+            <input type="hidden" name="collations[5]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>cpf</th>
+
+            <td>varchar(30)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[6]" size="40" class="textfield" id="field_6" />
+            <input type="hidden" name="names[6]"
+                value="cpf" />
+            <input type="hidden" name="types[6]"
+                value="varchar(30)" />
+            <input type="hidden" name="collations[6]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+
+                <tr class="even">
+            <th>sexo</th>
+            <td>enum('Masculino', 'Feminino')</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <select name="fields[7][]" multiple="multiple" size="2">
+                <option value="Masculino">Masculino</option>                <option value="Feminino">Feminino</option>            </select>
+
+            <input type="hidden" name="names[7]"
+                value="sexo" />
+            <input type="hidden" name="types[7]"
+                value="enum('Masculino', 'Feminino')" />
+            <input type="hidden" name="collations[7]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>razao_social</th>
+            <td>varchar(200)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[8]" size="40" class="textfield" id="field_8" />
+            <input type="hidden" name="names[8]"
+                value="razao_social" />
+            <input type="hidden" name="types[8]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[8]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+
+            <th>nome_fantasia</th>
+            <td>varchar(200)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[9]" size="40" class="textfield" id="field_9" />
+            <input type="hidden" name="names[9]"
+                value="nome_fantasia" />
+            <input type="hidden" name="types[9]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[9]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>cnpj</th>
+            <td>varchar(200)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[10]" size="40" class="textfield" id="field_10" />
+
+            <input type="hidden" name="names[10]"
+                value="cnpj" />
+            <input type="hidden" name="types[10]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[10]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>inscr_municipal</th>
+            <td>varchar(200)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[11]" size="40" class="textfield" id="field_11" />
+            <input type="hidden" name="names[11]"
+                value="inscr_municipal" />
+            <input type="hidden" name="types[11]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[11]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+
+            <th>inscr_estadual</th>
+            <td>varchar(200)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[12]" size="40" class="textfield" id="field_12" />
+            <input type="hidden" name="names[12]"
+                value="inscr_estadual" />
+            <input type="hidden" name="types[12]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[12]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="even">
+            <th>grupo_id</th>
+            <td>int(11)</td>
+            <td></td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+
+                        <option value="&gt;">&gt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&lt;=">&lt;=</option>
+                        <option value="!=">!=</option>
+                        <option value="LIKE">LIKE</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[13]" size="40" class="textfield" id="field_13" />
+            <input type="hidden" name="names[13]"
+                value="grupo_id" />
+            <input type="hidden" name="types[13]"
+                value="int(11)" />
+
+            <input type="hidden" name="collations[13]"
+                value="" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>endereco</th>
+            <td>varchar(300)</td>
+            <td>latin1_swedish_ci</td>
+
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+
+                    <input type="text" name="fields[14]" size="40" class="textfield" id="field_14" />
+            <input type="hidden" name="names[14]"
+                value="endereco" />
+            <input type="hidden" name="types[14]"
+                value="varchar(300)" />
+            <input type="hidden" name="collations[14]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>numero</th>
+
+            <td>varchar(50)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[15]" size="40" class="textfield" id="field_15" />
+            <input type="hidden" name="names[15]"
+                value="numero" />
+            <input type="hidden" name="types[15]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[15]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+
+                <tr class="odd">
+            <th>bloco</th>
+            <td>varchar(10)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[16]" size="40" class="textfield" id="field_16" />
+            <input type="hidden" name="names[16]"
+                value="bloco" />
+            <input type="hidden" name="types[16]"
+                value="varchar(10)" />
+            <input type="hidden" name="collations[16]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="even">
+            <th>complemento_tipo</th>
+            <td>varchar(5)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[17]" size="40" class="textfield" id="field_17" />
+
+            <input type="hidden" name="names[17]"
+                value="complemento_tipo" />
+            <input type="hidden" name="types[17]"
+                value="varchar(5)" />
+            <input type="hidden" name="collations[17]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>complemento</th>
+            <td>varchar(50)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[18]" size="40" class="textfield" id="field_18" />
+            <input type="hidden" name="names[18]"
+                value="complemento" />
+            <input type="hidden" name="types[18]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[18]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+
+            <th>cep</th>
+            <td>varchar(20)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[19]" size="40" class="textfield" id="field_19" />
+            <input type="hidden" name="names[19]"
+                value="cep" />
+            <input type="hidden" name="types[19]"
+                value="varchar(20)" />
+            <input type="hidden" name="collations[19]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>bairro</th>
+            <td>varchar(100)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[20]" size="40" class="textfield" id="field_20" />
+
+            <input type="hidden" name="names[20]"
+                value="bairro" />
+            <input type="hidden" name="types[20]"
+                value="varchar(100)" />
+            <input type="hidden" name="collations[20]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>cidade</th>
+            <td>varchar(100)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[21]" size="40" class="textfield" id="field_21" />
+            <input type="hidden" name="names[21]"
+                value="cidade" />
+            <input type="hidden" name="types[21]"
+                value="varchar(100)" />
+            <input type="hidden" name="collations[21]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+
+            <th>uf</th>
+            <td>varchar(2)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[22]" size="40" class="textfield" id="field_22" />
+            <input type="hidden" name="names[22]"
+                value="uf" />
+            <input type="hidden" name="types[22]"
+                value="varchar(2)" />
+            <input type="hidden" name="collations[22]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="even">
+            <th>tel_residencial</th>
+            <td>varchar(50)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[23]" size="40" class="textfield" id="field_23" />
+
+            <input type="hidden" name="names[23]"
+                value="tel_residencial" />
+            <input type="hidden" name="types[23]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[23]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>tel_comercial</th>
+            <td>varchar(50)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[24]" size="40" class="textfield" id="field_24" />
+            <input type="hidden" name="names[24]"
+                value="tel_comercial" />
+            <input type="hidden" name="types[24]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[24]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+
+            <th>tel_celular1</th>
+            <td>varchar(50)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[25]" size="40" class="textfield" id="field_25" />
+            <input type="hidden" name="names[25]"
+                value="tel_celular1" />
+            <input type="hidden" name="types[25]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[25]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>tel_celular2</th>
+            <td>varchar(20)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[26]" size="40" class="textfield" id="field_26" />
+
+            <input type="hidden" name="names[26]"
+                value="tel_celular2" />
+            <input type="hidden" name="types[26]"
+                value="varchar(20)" />
+            <input type="hidden" name="collations[26]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>fax</th>
+            <td>varchar(50)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[27]" size="40" class="textfield" id="field_27" />
+            <input type="hidden" name="names[27]"
+                value="fax" />
+            <input type="hidden" name="types[27]"
+                value="varchar(50)" />
+            <input type="hidden" name="collations[27]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+
+            <th>site</th>
+            <td>varchar(200)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[28]" size="40" class="textfield" id="field_28" />
+            <input type="hidden" name="names[28]"
+                value="site" />
+            <input type="hidden" name="types[28]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[28]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="even">
+            <th>email1</th>
+            <td>varchar(300)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[29]" size="40" class="textfield" id="field_29" />
+
+            <input type="hidden" name="names[29]"
+                value="email1" />
+            <input type="hidden" name="types[29]"
+                value="varchar(300)" />
+            <input type="hidden" name="collations[29]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>email2</th>
+            <td>varchar(200)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[30]" size="40" class="textfield" id="field_30" />
+            <input type="hidden" name="names[30]"
+                value="email2" />
+            <input type="hidden" name="types[30]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[30]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+
+            <th>email3</th>
+            <td>varchar(200)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[31]" size="40" class="textfield" id="field_31" />
+            <input type="hidden" name="names[31]"
+                value="email3" />
+            <input type="hidden" name="types[31]"
+                value="varchar(200)" />
+            <input type="hidden" name="collations[31]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>msn_messenger</th>
+            <td>varchar(255)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[32]" size="40" class="textfield" id="field_32" />
+
+            <input type="hidden" name="names[32]"
+                value="msn_messenger" />
+            <input type="hidden" name="types[32]"
+                value="varchar(255)" />
+            <input type="hidden" name="collations[32]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="even">
+            <th>yahoo_messenger</th>
+            <td>varchar(255)</td>
+
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[33]" size="40" class="textfield" id="field_33" />
+            <input type="hidden" name="names[33]"
+                value="yahoo_messenger" />
+            <input type="hidden" name="types[33]"
+                value="varchar(255)" />
+            <input type="hidden" name="collations[33]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+
+            <th>skype</th>
+            <td>varchar(255)</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[34]" size="40" class="textfield" id="field_34" />
+            <input type="hidden" name="names[34]"
+                value="skype" />
+            <input type="hidden" name="types[34]"
+                value="varchar(255)" />
+            <input type="hidden" name="collations[34]"
+                value="latin1_swedish_ci" />
+
+        </td>
+    </tr>
+                <tr class="even">
+            <th>observacoes</th>
+            <td>text</td>
+            <td>latin1_swedish_ci</td>
+            <td><select name="func[]">
+
+
+                        <option value="LIKE">LIKE</option>
+                        <option value="LIKE %...%">LIKE %...%</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="=">=</option>
+                        <option value="!=">!=</option>
+                        <option value="REGEXP">REGEXP</option>
+
+                        <option value="NOT REGEXP">NOT REGEXP</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[35]" size="40" class="textfield" id="field_35" />
+
+            <input type="hidden" name="names[35]"
+                value="observacoes" />
+            <input type="hidden" name="types[35]"
+                value="text" />
+            <input type="hidden" name="collations[35]"
+                value="latin1_swedish_ci" />
+        </td>
+    </tr>
+                <tr class="odd">
+            <th>status_id</th>
+            <td>int(10) </td>
+
+            <td></td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&lt;=">&lt;=</option>
+
+                        <option value="!=">!=</option>
+                        <option value="LIKE">LIKE</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="IS NULL">IS NULL</option>
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+
+            </td>
+            <td>
+                    <input type="text" name="fields[36]" size="40" class="textfield" id="field_36" />
+            <input type="hidden" name="names[36]"
+                value="status_id" />
+            <input type="hidden" name="types[36]"
+                value="int(10) " />
+            <input type="hidden" name="collations[36]"
+                value="" />
+        </td>
+    </tr>
+                <tr class="even">
+
+            <th>datacadastro</th>
+            <td>timestamp</td>
+            <td></td>
+            <td><select name="func[]">
+
+                        <option value="=">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&gt;=">&gt;=</option>
+
+                        <option value="&lt;">&lt;</option>
+                        <option value="&lt;=">&lt;=</option>
+                        <option value="!=">!=</option>
+                        <option value="LIKE">LIKE</option>
+                        <option value="NOT LIKE">NOT LIKE</option>
+                        <option value="IS NULL">IS NULL</option>
+
+                        <option value="IS NOT NULL">IS NOT NULL</option>
+                </select>
+            </td>
+            <td>
+                    <input type="text" name="fields[37]" size="40" class="textfield" id="field_37" />
+                    <script type="text/javascript">
+                    //<![CDATA[
+                    document.write('<a title="Calendário" href="javascript:openCalendar(\'token=bc8a1d7fcdfb860f1ffb89f48c2ee5f2\', \'insertForm\', \'field_37\', \'datetime\')"><img class="calendar" src="./themes/original/img/b_calendar.png" alt="Calendário"/></a>');
+                    //]]>
+                    </script>
+                    <input type="hidden" name="names[37]"
+                value="datacadastro" />
+            <input type="hidden" name="types[37]"
+                value="timestamp" />
+
+            <input type="hidden" name="collations[37]"
+                value="" />
+        </td>
+    </tr>
+            </tbody>
+    </table>
+</fieldset>
