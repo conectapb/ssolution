@@ -6,7 +6,7 @@ require("logado.php");
 function pegaListaClientes($conn)
 {
 	$res = bdQuery(
-		"SELECT CLI.*,(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS nome,GRU.codigo AS grupo_codigo,GRU.nome AS grupo_nome,GRU.nome_padrao AS grupo_nome_padrao
+		"SELECT CLI.*,(IF(CLI.tipo='Pessoa física',CLI.nome,CLI.razao_social)) AS nome,GRU.codigo AS grupo_codigo,GRU.nome AS grupo_nome,GRU.nome_padrao AS grupo_nome_padrao
 		FROM clientes CLI
 		INNER JOIN grupos GRU ON CLI.grupo_id = GRU.id
 		ORDER BY GRU.nome_padrao,CLI.nome",
