@@ -312,7 +312,7 @@ else if($modo=="lst")
 	);*/
 	
 	$res = bdQuery("
-		SELECT CLI.*,(IF(CLI.tipo=1,CLI.nome,CLI.razao_social)) AS nome,GRU.nome_padrao AS grupo
+		SELECT CLI.*,(IF(CLI.tipo='Pessoa física',CLI.nome,CLI.razao_social)) AS nome,GRU.nome_padrao AS grupo
 		FROM clientes CLI
 		INNER JOIN grupos GRU ON CLI.grupo_id = GRU.id
 		INNER JOIN clientes_status STA ON CLI.status_id = STA.id
@@ -339,7 +339,7 @@ else if($modo=="obtemGrupos")
 	echo "<option value=\"\"></option>";
 	$res = bdSelect("*","grupos","","nome_padrao",$conexao);
 	while($tmp = mysql_fetch_array($res))
-		echo "<option value=\"" . $tmp['id'] . "\">" . $tmp['codigo'] . " - " . $tmp['nome_padrao'] . "</option>\n";
+		echo utf8_encode("<option value=\"" . $tmp['id'] . "\">" . $tmp['codigo'] . " - " . $tmp['nome_padrao'] . "</option>\n");
 }
 else if($modo=="obtemUmGrupo")
 {
@@ -373,5 +373,32 @@ else if($modo=="obtemStatus")
 	$res = bdSelect("*","clientes_status","","",$conexao);
 	while($tmp = mysql_fetch_array($res))
 		echo utf8_encode("<option value=\"" . $tmp['id'] . "\">" . $tmp['nome'] . "</option>\n");
+}
+else if($modo=="consultaCep")
+{
+    $cep = str_replace(".", "", $_REQUEST["str_cep"]);
+    $cep = str_replace(" ", "", $cep);
+    $cep = str_replace("-", "", $cep);
+    $cep = str_replace("_", "", $cep);
+    $cep = substr($cep,0,5) . "-" . substr($cep, 5, 3);
+
+    $service = new CEPLivreService();
+
+    
+    
+    $address = $service->buscaEndereco($cep);
+    //$campos[-1] = $address->getStatus();
+    print_a($address);
+    echo $cep;
+    $campos[0] = $address->getTipoLogradouroDesc();
+    $campos[1] = $address->getLogradouro();
+    $campos[2] = $address->getBairro();
+    
+    $campos[3] = $address->getCidade();
+    $campos[4] = $address->getUfSigla();
+    $campos[5] = $address->getCep();
+    print_a($campos);
+    $visual->assign('campos',$campos);
+    echo ($visual->fetch('adm/clientes_consultacep.tpl'));
 }
 ?>
