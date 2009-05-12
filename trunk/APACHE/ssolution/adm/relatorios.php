@@ -3,6 +3,9 @@ define('ROOT','../');
 define('AREA','relatorios');
 require(ROOT . 'configs.php');
 
+$modo = $_REQUEST['modo'];
+if($modo=="") $modo="lst";
+
 if ($modo=="clienteslst")
 {
 
@@ -46,13 +49,14 @@ if ($modo=="clienteslst")
             ",
             $conexao,0
         );
-    }
+    
 
-    while ($tmp = mysql_fetch_assoc($res))
-    {
-        $tmp['codigo'] = pad($tmp['codigo'],5);
-        $dados[] = $tmp;
-    }
+		while ($tmp = mysql_fetch_assoc($res))
+		{
+			$tmp['codigo'] = pad($tmp['codigo'],5);
+			$dados[] = $tmp;
+		}
+	}
         
     echo "ate aqui tudo bem";
     $visual->assign('dados',$dados);
