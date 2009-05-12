@@ -13,6 +13,7 @@ grupo=grupo_atual="{$campos.grupo_id[4]}";
 modo = "{$modo}";
 {literal}
 $(document).ready(function() {
+
     $('#mapTd').hide();
     $('#toggleMapDisplay').click(function(){
 
@@ -92,6 +93,11 @@ $(document).ready(function() {
     var mapControl;
     load();
 
+    $('#updateCep').click(function(){
+        consultaCep($('#cep').val() , findPosY(this) );
+    });
+
+    $('#complemento_tipo_Lj').click(function(){if(this.checked)this.checked=false;});
 
  });
 
@@ -160,10 +166,74 @@ $(document).ready(function() {
             }
         );
     }
+    
+    function consultaCep(cep,posY)
+    {
+
+        //alert('consultaCep#' + cep + "#" + posY);
+        $.post('clientes.php',
+            { modo : "consultaCep" , str_cep : cep },
+        	function(resposta){
+                //alert(resposta);
+                var tmp = resposta.split("#");
+                /*$('#endereco').val(tmp[0] + " " + tmp[1]);
+                $('#bairro').val(tmp[2]);
+                $('#cidade').val(tmp[3]);
+                $('#uf').val(tmp[4]);*/
+
+                $("#visualizarBox").hide("slow");
+                $("#visualizarBox").html(resposta);
+                $("#visualizarBox").css("top", self.pageYOffset+10);
+                $("#visualizarBox").show("slow");
+                //alert(resposta);
+            }
+        );
+    }
+
+    function visualizar($id,$posY)
+    {
+        if($id == parseInt($id))
+        {
+            $.post('clientes.php',
+                {
+                modo : "vis",
+                id : $id },
+                function(resposta){
+                   $("#visualizarBox").hide("slow");
+                   $("#visualizarBox").html(resposta);
+                   $("#visualizarBox").css("top", self.pageYOffset+10);
+                   $("#visualizarBox").show("slow");
+               }
+            );
+        }
+        else
+        {
+            alert("visualizar: id NaN!")
+        }
+    }
+
+    function findPosY(obj) {
+        var curleft = curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curleft += obj.offsetLeft;
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            //return [curleft,curtop];
+            return curtop;
+        }
+    }
+
+    function check(button) {
+     if (button.checked)
+     button.checked=false
+    }
 </script>
 {/literal}
 
 <br />
+
+<div id="visualizarBox" style="position:absolute; top:10px; left:10px; border:1px solid black; background:#FFFFFF"></div>
 
 <table border="0" cellpadding="2" cellspacing="0" border="0">
 	<form name="frm" action="{$SCRIPT_NAME}" method="post">
@@ -188,7 +258,7 @@ $(document).ready(function() {
 	</tr>
 	
 	<tr>
-		<td class="rotulos">C&oacute;digo :</td>
+		<td class="rotulos">Código :</td>
 		<td><input type="text" class="text_normal" id="codigo" name="codigo" value="{$campos.codigo[4]}" /></td>
 	</tr>
 	
@@ -276,10 +346,11 @@ $(document).ready(function() {
 	<tr>
 		<td class="rotulos">Complemento :</td>
 		<td>
-		<input type="radio" name="complemento_tipo" id="complemento_tipo_Ap" class="radio_normal" value="Ap." /><label for="complemento_tipo_Ap">Ap.</label>
-		<input type="radio" name="complemento_tipo" id="complemento_tipo_Cj" class="radio_normal" value="Cj." /><label for="complemento_tipo_Cj">Cj.</label>
-		<input type="radio" name="complemento_tipo" id="complemento_tipo_Sl" class="radio_normal" value="Sl." /><label for="complemento_tipo_Sl">Sl.</label>
-		<input type="radio" name="complemento_tipo" id="complemento_tipo_Lj" class="radio_normal" value="Lj." /><label for="complemento_tipo_Lj">Lj.</label>
+        <input type="radio" name="complemento_tipo" id="complemento_tipo_Casa" class="radio_normal" value="CASA" /><label for="complemento_tipo_Casa">CASA</label>
+		<input type="radio" name="complemento_tipo" id="complemento_tipo_Ap" class="radio_normal" value="AP." /><label for="complemento_tipo_Ap">AP.</label>
+		<input type="radio" name="complemento_tipo" id="complemento_tipo_Cj" class="radio_normal" value="CJ." /><label for="complemento_tipo_Cj">CJ.</label>
+		<input type="radio" name="complemento_tipo" id="complemento_tipo_Sl" class="radio_normal" value="SL." /><label for="complemento_tipo_Sl">SL.</label>
+		<input type="radio" name="complemento_tipo" id="complemento_tipo_Lj" class="radio_normal" value="LJ." /><label for="complemento_tipo_Lj">LJ.</label>
 		<input type="text" class="text_normal" name="complemento" value="{$campos.complemento[4]}" style="width:110px;" />
 		<label for="bloco" class="rotulos">
 		Bloco&nbsp;:&nbsp;</label><input type="text" class="text_normal" name="bloco" value="{$campos.bloco[4]}" style="width:106px;" />
@@ -293,7 +364,10 @@ $(document).ready(function() {
 	
 	<tr>
 		<td class="rotulos">CEP :</td>
-		<td><input type="text" class="text_normal" name="cep" id="cep" value="{$campos.cep[4]}" style="width:450px;" /></td>
+		<td>
+            <input type="text" class="text_normal" name="cep" id="cep" value="{$campos.cep[4]}" style="width:450px;" />
+            <input type="button" id="updateCep" value="Consultar">
+            </td>
 	</tr>
 	
 	<tr>
@@ -419,14 +493,16 @@ $(document).ready(function() {
 <script>
 if("{$campos.sexo[4]}"!="")
 	document.getElementById("{$campos.sexo[4]}").checked=true;
-	
-if("{$campos.complemento_tipo[4]}"=="Ap.")
+
+if("{$campos.complemento_tipo[4]}"=="Casa" || "{$campos.complemento_tipo[4]}"=="CASA")
+	document.getElementById("complemento_tipo_Casa").checked=true;
+else if("{$campos.complemento_tipo[4]}"=="Ap." || "{$campos.complemento_tipo[4]}"=="AP.")
 	document.getElementById("complemento_tipo_Ap").checked=true;
-if("{$campos.complemento_tipo[4]}"=="Cj.")
+else if("{$campos.complemento_tipo[4]}"=="Cj." || "{$campos.complemento_tipo[4]}"=="CJ.")
 	document.getElementById("complemento_tipo_Cj").checked=true;
-if("{$campos.complemento_tipo[4]}"=="Sl.")
+else if("{$campos.complemento_tipo[4]}"=="Sl." || "{$campos.complemento_tipo[4]}"=="SL.")
 	document.getElementById("complemento_tipo_Sl").checked=true;
-if("{$campos.complemento_tipo[4]}"=="Lj.")
+else if("{$campos.complemento_tipo[4]}"=="Lj." || "{$campos.complemento_tipo[4]}"=="LJ.")
 	document.getElementById("complemento_tipo_Lj").checked=true;
 
 </script>

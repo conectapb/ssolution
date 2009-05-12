@@ -7,6 +7,7 @@ session_start();
 define('PROJECTNAME','ssolution');
 
 include("libs/debuglib.php");
+require("libs/CEPLivreService.php");
 
 $thispage = $_SERVER['SCRIPT_NAME'];
 $querystring = $_SERVER['QUERY_STRING'];
@@ -88,7 +89,7 @@ $visual->assign('tpl_dir_adm',$visual->template_dir."/adm/");
 if($_REQUEST['tpl_adm']!="")
 	$_SESSION['tpl_adm'] = $_REQUEST['tpl_adm'];
 else if($_SESSION['tpl_adm']=="")
-	$_SESSION['tpl_adm']=3;
+	$_SESSION['tpl_adm']=2;
 
 $visual->assign('tpl_adm',$_SESSION['tpl_adm']);
 $visual->assign('tpl_adm_topo',$visual->template_dir."/adm/topo" . $_SESSION['tpl_adm'] . ".tpl");
